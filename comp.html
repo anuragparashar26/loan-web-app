@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Comparison Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            color: #2d3436;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 0 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+        }
+
+        .name {
+            font-size: 30px;
+            color: #000;
+            margin-left: 10px;
+            margin-right: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+            padding: 6px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1faeaa;
+        }
+
+        .hide-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 1000px;
+            margin: 80px auto 20px;
+            padding: 35px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            color: #1faeaa;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        h2 {
+            color: #636e72;
+            font-weight: 600;
+            margin-top: 35px;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        h2:hover {
+            color: #2d3436;
+        }
+
+        p {
+            color: #636e72;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background: #f7f9fc;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            max-width: 350px;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #2d3436;
+            font-size: 1.1em;
+        }
+
+        input[type="number"],
+        select {
+            padding: 12px 15px;
+            border: 2px solid #dfe6e9;
+            border-radius: 6px;
+            font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            background: #fff;
+        }
+
+        input[type="number"]:hover,
+        select:hover {
+            border-color: #b2bec3;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        input[type="number"]:focus,
+        select:focus {
+            border-color: #0984e3;
+            box-shadow: 0 4px 12px rgba(9, 132, 227, 0.2);
+            transform: scale(1.02);
+            outline: none;
+        }
+
+        button {
+            padding: 14px 25px;
+            background: linear-gradient(45deg, #0984e3, #00b894);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 250px;
+            align-self: center;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(9, 132, 227, 0.3);
+        }
+
+        .entered-values {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f1f3f5;
+            border-radius: 8px;
+            font-size: 1em;
+            color: #2d3436;
+            display: none;
+        }
+
+        .error {
+            color: #d63031;
+            font-weight: 600;
+            margin-top: 15px;
+            background: #ffeaa7;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            animation: fadeIn 0.5s ease;
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #dfe6e9;
+        }
+
+        th {
+            background: linear-gradient(45deg, #2d3436, #636e72);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        td {
+            background: #fff;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        tr:nth-child(even) td {
+            background: #f9fbfc;
+        }
+
+        tr:hover td {
+            background: #e6f0fa;
+            transform: scale(1.01);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        footer {
+            background-color: #00456d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        footer h2 {
+            color: white;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 5px 0;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0 20px;
+            }
+
+            .container {
+                margin: 70px 20px 20px;
+                padding: 20px;
+            }
+
+            .form-group {
+                max-width: 100%;
+            }
+
+            button {
+                width: 100%;
+                max-width: none;
+            }
+
+            table, th, td {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .name {
+                font-size: 24px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="static/logo.png" alt="Logo">
+        </div>
+        <div class="name">
+            <a href="#pg1" class="hide-link">LendWise</a>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <div class="home">
+                <a href="index.html" class="hide-link">Home</a>
+            </div>
+        </div>     
+    </header>
+    <div class="container">
+        <h1>Loan Comparison Tool</h1>
+        <p>Compare loans from top banks with ease.</p>
+        <form id="loanForm">
+            <div class="form-group">
+                <label for="loan_type">Loan Type:</label>
+                <select id="loan_type" name="loan_type" required>
+                    <option value="" disabled selected>Select a loan type</option>
+                    <option value="personal">Personal</option>
+                    <option value="home">Home</option>
+                    <option value="car">Car</option>
+                    <option value="education">Education</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="principal">Loan Amount (₹):</label>
+                <input type="number" id="principal" name="principal" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="years">Loan Term (Years):</label>
+                <input type="number" id="years" name="years" required>
+            </div>
+            <button type="submit">Compare Loans</button>
+        </form>
+
+        <div class="entered-values" id="enteredValues">
+            <p><strong>Entered Values:</strong></p>
+            <p id="enteredLoanType">Loan Type: </p>
+            <p id="enteredPrincipal">Loan Amount: ₹</p>
+            <p id="enteredYears">Loan Term: </p>
+        </div>
+
+        <p class="error" id="errorMessage"></p>
+
+        <h2 id="resultsHeader" style="display: none;">Comparison Results</h2>
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Bank Name</th>
+                    <th>Interest Rate</th>
+                    <th>Monthly Payment</th>
+                    <th>Total Interest Paid</th>
+                </tr>
+            </thead>
+            <tbody id="resultsBody"></tbody>
+        </table>
+    </div>
+    <footer>
+        <h2>Need More Help?</h2>
+        <p>Call Us: +91 7870645478</p>
+        <p>Email: code404@yourloanwebsite.com</p>
+    </footer>
+    <script>
+        function calculateMonthlyPayment(principal, annualRate, years) {
+            const monthlyRate = annualRate / 12 / 100;
+            const totalMonths = years * 12;
+            if (monthlyRate === 0) {
+                return principal / totalMonths;
+            }
+            const payment = principal * (monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) /
+                           (Math.pow(1 + monthlyRate, totalMonths) - 1);
+            return payment;
+        }
+
+        function getLoanRates(loanType) {
+            const rates = {
+                "personal": {
+                    "ICICI Bank": 10.85,
+                    "Axis Bank": 10.49,
+                    "HDFC Bank": 10.50,
+                    "SBI": 11.45
+                },
+                "home": {
+                    "ICICI Bank": 8.75,
+                    "Axis Bank": 8.55,
+                    "HDFC Bank": 8.75,
+                    "SBI": 8.50
+                },
+                "car": {
+                    "ICICI Bank": 9.10,
+                    "Axis Bank": 9.25,
+                    "HDFC Bank": 9.00,
+                    "SBI": 8.85
+                },
+                "education": {
+                    "ICICI Bank": 9.50,
+                    "Axis Bank": 9.75,
+                    "HDFC Bank": 9.55,
+                    "SBI": 8.65
+                }
+            };
+            return rates[loanType.toLowerCase()] || {};
+        }
+
+        const form = document.getElementById("loanForm");
+        if (form) {
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                console.log("Form submitted");
+
+                const loanType = document.getElementById("loan_type").value.toLowerCase();
+                const principal = parseFloat(document.getElementById("principal").value);
+                const years = parseInt(document.getElementById("years").value);
+
+                const errorMessage = document.getElementById("errorMessage");
+                const enteredValues = document.getElementById("enteredValues");
+                const resultsHeader = document.getElementById("resultsHeader");
+                const resultsTable = document.getElementById("resultsTable");
+                const resultsBody = document.getElementById("resultsBody");
+
+                errorMessage.style.display = "none";
+                errorMessage.textContent = "";
+                resultsHeader.style.display = "none";
+                resultsTable.style.display = "none";
+                resultsBody.innerHTML = "";
+                enteredValues.style.display = "none";
+
+                try {
+                    if (!loanType) {
+                        throw new Error("Please select a loan type.");
+                    }
+                    if (isNaN(principal) || isNaN(years) || principal <= 0 || years <= 0) {
+                        throw new Error("Please enter valid positive numeric values for loan amount and term.");
+                    }
+
+                    const banks = getLoanRates(loanType);
+                    if (Object.keys(banks).length === 0) {
+                        throw new Error("Invalid loan type selected.");
+                    }
+
+                    document.getElementById("enteredLoanType").textContent = `Loan Type: ${loanType}`;
+                    document.getElementById("enteredPrincipal").textContent = `Loan Amount: ₹${principal}`;
+                    document.getElementById("enteredYears").textContent = `Loan Term: ${years} years`;
+                    enteredValues.style.display = "block";
+
+                    const results = [];
+                    for (const [bank, rate] of Object.entries(banks)) {
+                        const monthlyPayment = calculateMonthlyPayment(principal, rate, years);
+                        const totalPaid = monthlyPayment * years * 12;
+                        const totalInterest = totalPaid - principal;
+                        results.push({
+                            bank,
+                            rate,
+                            monthlyPayment,
+                            totalInterest
+                        });
+                    }
+
+                    results.forEach(result => {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td>${result.bank}</td>
+                            <td>${result.rate}%</td>
+                            <td>₹${result.monthlyPayment.toFixed(2)}</td>
+                            <td>₹${result.totalInterest.toFixed(2)}</td>
+                        `;
+                        resultsBody.appendChild(row);
+                    });
+
+                    resultsHeader.style.display = "block";
+                    resultsTable.style.display = "table";
+                } catch (error) {
+                    console.error("Error:", error.message);
+                    errorMessage.textContent = error.message;
+                    errorMessage.style.display = "block";
+                }
+            });
+        } else {
+            console.error("Form element not found!");
+        }
+    </script>
+</body>
+</html>
