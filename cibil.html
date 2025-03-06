@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Score Checker - Full Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 0 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+        }
+
+        .name {
+            font-size: 30px;
+            color: #000;
+            margin-left: 10px;
+            margin-right: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+            padding: 6px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1faeaa;
+        }
+
+        .hide-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 80px auto 20px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex-grow: 1;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #00456d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer h2 {
+            color: white;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 5px 0;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="static/logo.png" alt="Logo">
+        </div>
+        <div class="name">
+            <a href="#pg1" class="hide-link">LendWise</a>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <div class="home">
+                <a href="index.html" class="hide-link">Home</a>
+            </div>
+        </div>     
+    </header>
+    <div class="container">
+        <h1>Credit Score Checker</h1>
+        <p>the credit score checker allows you to calculate your credit score report and cibil score. it is a three-digit numeric expression that represents your creditworthiness.</p>
+        <p>if you are planning to request a credit card, then it is recommended to have your cibil score be at least 750. reviewing the history of credit of the applicant is an essential part of the screening process.</p>
+
+        <h2>what is a credit score and how is it calculated?</h2>
+        <p>a credit score is a statistical representation of one’s creditworthiness. it helps in evaluating your ability to pay back the amount you have borrowed. a person’s credit score usually ranges from 300-900, and the one with the highest score is considered to be a trustworthy applicant. always try to reach the highest in range as it becomes very beneficial at the time of applying for a loan or a credit card. whereas, if you have a low score or you fall in lower range this displays you are an irresponsible loan applicant and have not made timely payments of your loans/dues.</p>
+
+        <h3>CIBIL score range</h3>
+        <table>
+            <tr>
+                <th>what it means</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>300-549</td>
+                <td>this is the lowest CIBIL score range. it shows that you have delayed your credit card bill payments or loan EMIs and you are at a high-risk of turning into a defaulter.</td>
+            </tr>
+            <tr>
+                <td>550 – 649</td>
+                <td>although this CIBIL score range is considered as fair, it shows that you have been struggling to pay the dues on time.</td>
+            </tr>
+            <tr>
+                <td>650 – 749</td>
+                <td>this CIBIL score shows that you have good credit behaviour. you have a high chance of getting a credit card or loan approval. however, you may still not get the best rate of interest while applying for a loan.</td>
+            </tr>
+            <tr>
+                <td>750 – 900</td>
+                <td>CIBIL score above 750 is considered excellent and shows that you have consistently paid your dues on time and have an impressive payment history. since you are at the lowest risk of turning into a defaulter, lenders will give you loans easily and at lower interest rates.</td>
+            </tr>
+        </table>
+
+        <p>credit bureaus collect this information for calculating a credit score, which includes</p>
+        <ul>
+            <li>personal information</li>
+            <li>credit history length</li>
+            <li>new credit</li>
+        </ul>
+        <p>some common factors that impact credit score are:</p>
+        <ul>
+            <li>amounts owed</li>
+            <li>payment history</li>
+            <li>credit mix</li>
+        </ul>
+
+        <h2>why is it important to maintain a good credit score?</h2>
+        <p>listed down some of the important reasons due to which you must maintain a good credit score:</p>
+        <ul>
+            <li>improves your eligibility for loans: a good credit score improves your eligibility to get a loan faster. a good credit score means that you pay the bills or outstanding amount timely that leaves a good impression of yours on the banks or other financial institutions where you have applied for a loan.</li>
+            <li>quicker loan approvals: applicants with a good credit score and long credit history are offered pre-approved loans. moreover, the loan that you have applied for gets approved quickly and processing time is zero.</li>
+            <li>lower interest rate: with a good credit score, you can enjoy the benefit of a lower rate of interest on the loan amount that you have applied for.</li>
+            <li>credit cards with attractive benefits- you are offered credit cards with attractive benefits and rewards if you have a healthy credit score.</li>
+            <li>higher credit card limits: a good credit score not only gets you the best of credit cards with attractive benefits or lower rate of interest on the loan you have applied for but also you are eligible for getting a higher loan amount. a good credit score means that you are capable of handling the credit in the best possible manner, therefore, banks or financial institutions will consider offering you a credit card with a higher limit.</li>
+        </ul>
+
+        <h2>what are the factors that are considered for calculating credit score?</h2>
+        <p>a credit score is calculated by the credit information departments considering various factors that are as follows:</p>
+        <ul>
+            <li>credit score history: credit history depicts the capability of the loan applicant whether he/she is responsible for paying the debts or not. it has the details of the number of accounts that you hold, credit usage details and information regarding delayed or failed payments.</li>
+            <li>credit score inquiries: credit inquiries include the information like the type of loan who have inquired about, the amount of loan you have applied for and whether you are an individual applicant or a joint applicant.</li>
+            <li>repayment record: repayment record consists of the details regarding your timeliness of repayment and failed payments.</li>
+        </ul>
+
+        <h2>how is the credit score calculated?</h2>
+        <p>a credit score is calculated differently by the various credit information bureaus. general factors on the basis of which your credit score is calculated are mentioned below:</p>
+        <ul>
+            <li>payment history - 35% of your credit score is calculated on the basis of your payment history. your payment history shows how timely you’ve made the payments, how many times you've missed on the payments or how many days past the due date you’ve paid your bills. so you can score high if you have a higher proportion of on-time payments. make sure you never miss out on payments as this would leave a negative impact on your score.</li>
+            <li>how much you owe - about 30% of your credit score depends upon how much you owe on loans and credit cards. if you have a high balance and have reached the limit of your credit card then this would lead to a drop in your credit score. while small balances and timely payments would help in increasing the score.</li>
+            <li>credit history length - the length of your credit history is accountable for 15% of your credit score. if your history of on-time payments is long then definitely you would have a higher credit score. having said that, at some point, you must apply for a credit card or loan rather than avoiding it so that you also have a credit history for banks’ review.</li>
+            <li>how many products you have - the products (types of loans) that you have is responsible for the 10% of your credit score. having a mix of various products like installment loans, home loans, and credit cards help in increasing your credit score.</li>
+            <li>credit activity - remaining 10% depends on your recent credit activities. credit activity includes all the information regarding opening or applying for various accounts, repayment history, types of loans you have applied for and credit limit usage.</li>
+        </ul>
+
+        <h2>what is a good credit score?</h2>
+        <p>a credit score is an indicator of creditworthiness which is usually 3-digit numeric. it ranges from 300 to 900 and can be easily calculated using a credit score checker. a credit score of 680 or above is considered to be a good score. lenders rely on the credit score before giving a loan. whenever a person applies for a loan, lenders check -</p>
+        <ul>
+            <li>CIBIL report and score</li>
+            <li>employment status</li>
+            <li>account details</li>
+            <li>payment history</li>
+            <li>emi-income ratio</li>
+        </ul>
+        <p>in case the debtor or borrower is unable to pay back the debt because of any disability or a long-term ailment, the credit health insurance protects the debtor.</p>
+
+        <h2>why it is important to maintain a good credit score?</h2>
+        <p>a credit score indicates the creditworthiness of an individual. it is usually a 3-digit numeric that ranges from 300 to 900.</p>
+        <table>
+            <tr>
+                <th>range</th>
+                <th>status</th>
+            </tr>
+            <tr>
+                <td>300-579</td>
+                <td>poor credit</td>
+            </tr>
+            <tr>
+                <td>580-669</td>
+                <td>fair credit</td>
+            </tr>
+            <tr>
+                <td>670-739</td>
+                <td>good credit</td>
+            </tr>
+            <tr>
+                <td>740-799</td>
+                <td>very good credit</td>
+            </tr>
+            <tr>
+                <td>800-900</td>
+                <td>exceptional credit</td>
+            </tr>
+        </table>
+        <p>a credit score of 680 or above is considered to be a good score. having a good credit score will-</p>
+        <ul>
+            <li>boost your chances of getting credit cards quickly</li>
+            <li>you tend to get quick and easy loan approvals</li>
+            <li>having a good credit score enhances your chances of pay a lower interest rate against your loan</li>
+            <li>it further increases your loan limit as you can apply for a higher loan amount from any bank.</li>
+            <li>you get access to pre-approved loans as well.</li>
+            <li>you might get discounts on charges or processing fees.</li>
+            <li>it helps get fast approval for rental houses and apartments as a good credit score assures your credit trustworthiness.</li>
+            <li>you can manage to get the best car insurance rate with a good credit score. in comparison to bad credit score applicants, you will pay less for your insurance.</li>
+        </ul>
+
+        <h2>how can the credit score be improved?</h2>
+        <p>since you know the significance of maintaining a good credit score and the factors that are considered for calculating the credit score, listed below are easy ways to improve your credit score:</p>
+        <ul>
+            <li>make timely payments of your loan EMIs</li>
+            <li>pay your bills on time</li>
+            <li>do not exhaust the complete credit limit</li>
+            <li>clear any outstanding dues or bills</li>
+            <li>avoid applying for numerous credit cards or loans</li>
+        </ul>
+
+        <h2>how to check CIBIL score online?</h2>
+        <p>nowadays, it's quite easy to check CIBIL score online,</p>
+        <ol>
+            <li>visit <a href="https://www.cibil.com/freecibilscore" target="_blank">https://www.cibil.com/freecibilscore</a></li>
+            <li>click on ‘get your credit score’ or ‘check my CIBIL score.’</li>
+            <li>Pick the desired subscription plan.</li>
+            <li>fill in the details for identity proof.</li>
+            <li>click on ‘proceed to payment’ and process the payment.</li>
+            <li>get the CIBIL score and report in your email.</li>
+        </ol>
+
+        <h2>how CIBIL score impacts loan & credit card eligibility?</h2>
+        <p>let’s be clear, the score calculated through the CIBIL score checker works as a first impression of your creditworthiness for the lender. as soon as a loan application or a credit card request is submitted, the lender reviews and assesses your cibil score.</p>
+        <p>if it is found that your credit score is less than 750, your application might be rejected or not even considered. having a high CIBIL score makes it easy for you to get loan approval or a credit card.</p>
+        <p>however, it's important to mention that a CIBIL score is not the only determinant of your credit capacity.</p>
+        <p>below factors are also considered-</p>
+        <ul>
+            <li>debt-income ratio</li>
+            <li>employment history</li>
+            <li>profession and other relevant details before rejecting/approving the application</li>
+        </ul>
+
+        <h2>different credit bureaus available in India</h2>
+        <p>a credit bureau is a credit agency that collates your information and shares it with lenders and creditors in the form of a CIBIL score that is helpful in checking your creditworthiness.</p>
+        <p>below are some leading credit bureaus of the country -</p>
+        <ol>
+            <li>transunion CIBIL score</li>
+            <p>it is a complete credit bureau that reports the analysis for organisations as well as individuals. the credit score ranges from 300 to 850; 720 or above is an excellent score. in the case of any entity or company, the credit score is known as a performance score. transunion cibil members include all the major financial institutes, lenders, nbfcs, and banks, etc.</p>
+            <li>equifax credit score checker</li>
+            <p>equifax gives portfolio scores and risk scores along with credit scores that usually range from 1 to 999 for individuals. working as an approved credit rating agency since 2010, equifax provides different reports like portfolio management, industry diagnosis, credit fraud, or risk management report in the case of companies.</p>
+            <li>experian credit score report</li>
+            <p>established in the year 2010, experian conducts an analysis of companies and individuals for their credit reports. their score ranges from 300 to 900, and it only takes 20 days to get a report.</p>
+            <li>CRIF high mark credit score checker</li>
+            <p>approved by RBI (reserve bank of india), CRIF high mark also conducts analysis for the credit rating of corporates and individuals. the credit rating ranges from 300 to 850.</p>
+        </ol>
+
+        <h2>what is the difference between credit score & credit report?</h2>
+        <p>a credit score is a three-digit numeric expression that denotes your creditworthiness while a credit report is a record of your entire credit history.</p>
+        <table>
+            <tr>
+                <th>credit report</th>
+                <th>credit score</th>
+            </tr>
+            <tr>
+                <td>a lengthy text-based report on the credit history of a customer.</td>
+                <td>a 3-digit summary of a customer’s credit report.</td>
+            </tr>
+            <tr>
+                <td>acts as a credit reference.</td>
+                <td>measures credit risk according to the given information in a credit report.</td>
+            </tr>
+            <tr>
+                <td>is a separate document.</td>
+                <td>based on the provided information in a credit report.</td>
+            </tr>
+            <tr>
+                <td>contains details like the loan amount, history of payments, etc.</td>
+                <td>only shows your creditworthiness if you are deemed scored more than 760 or above.</td>
+            </tr>
+            <tr>
+                <td>equifax, experian, and transunion are credit reporting bureaus.</td>
+                <td>sometimes, banks can create their own score, or they can refer it to the commonly availed company.</td>
+            </tr>
+            <tr>
+                <td>customers can obtain these reports from any of the mentioned bureaus.</td>
+                <td>fico, other credit bureaus, and sometimes lenders give information about the credit score to the customers.</td>
+            </tr>
+        </table>
+
+        <h2>FAQs</h2>
+        <h3>how can i check my credit score for free?</h3>
+        <p>you can get one free copy of your credit report every 12 months from the three nationwide credit reporting companies. you can order it online from annualcreditreport.com. this is the only authorized website for free credit reports. also, you can call 1-877-322-8228.</p>
+
+        <h3>on what factors is credit score calculated?</h3>
+        <ul>
+            <li>credit history</li>
+            <li>credit enquiry</li>
+            <li>repayment record</li>
+        </ul>
+
+        <h3>how to check credit score?</h3>
+        <p>there are several ways to check cibil score but the simplest way to check your credit score is to visit CRED’s website - cred.club or CRED app and click on ‘check credit score’. next, enter your name, phone number, and email ID, then click on confirm. You will receive your cibil score report on your registered email ID and via WhatsApp.</p>
+
+        <h3>is 786 a good credit score?</h3>
+        <p>786 is considered a very good credit score. moreover, you can elevate this score to an exceptional range of 800-850.</p>
+
+        <h3>is it best to pay off credit card bills in full?</h3>
+        <p>you should pay off credit card bills in full rather than keeping the balance. if you pay credit card bill payment dues in full, you will not have to pay extra interest charged on the balance.</p>
+
+        <h3>what happens if i pay more than my credit card balance?</h3>
+        <p>overpaying your credit card balance will result in a negative account balance. this means that the bank or the financial institution will owe you money.</p>
+
+        <h3>can everyone access my credit score?</h3>
+        <p>no, not everyone can look at your credit report. to access credit reports, an organization needs to have a "permissible purpose."</p>
+
+        <h3>does CIBIL score affect my chances of getting a new loan or credit card?</h3>
+        <p>yes, all banks and lenders check the CIBIL score of the applicant before approving the credit card or loan request.</p>
+
+        <h3>what is the minimum CIBIL score required for any type of loan?</h3>
+        <p>generally a CIBIL credit score of 750 and above is considered good for applying for any types of loans.</p>
+
+        <h3>what is the minimum credit score to get personal loans?</h3>
+        <p>the banks and NBFCs consider a CIBIL credit score of 750 and above as the minimum credit score needed to approve a personal loans. a higher credit score means you are at the lowest risk of turning into a defaulter, therefore, banks and NBFCs will be willing to give you personal loans easily.</p>
+
+        <h3>what happens if my CIBIL report has errors?</h3>
+        <p>your low CIBIL score can be because of errors in your credit report. you can increase your CIBIL score by requesting the credit rating agency to rectify the errors in your credit report.</p>
+
+        <h3>can CIBIL delete or change my credit information on its own?</h3>
+        <p>no, CIBIL can’t delete or change records reflecting on your credit report on its own. it simply collects the records of individuals provided by banks and financial institutions.</p>
+
+        <h3>why is PAN card required for checking the credit score?</h3>
+        <p>PAN card is not mandatory for check the credit score but can be used as a valid Proof of Identity (PoI) identifying individuals in the database.</p>
+
+        <h3>why do we need a phone number for credit score?</h3>
+        <p>it is used to verify the identity of an individual accurately to make sure the person is the right recipient of the credit report.</p>
+
+        <h3>is there a limit to request for accessing credit score?</h3>
+        <p>there is no limit on the number of times you can request for your credit score and report.</p>
+
+        <h3>what’s the credit score required for application of a credit card?</h3>
+        <p>a CIBIL credit score of 750 and above is considered to be good for applying for a credit card.</p>
+
+        <h3>how to check credit score with Aadhaar card?</h3>
+        <p>To check your credit score with Aadhaar number, visit cibil's website, click on the credit score check tool, enter the required details, including your Aadhaar number and click on submit to get your cibil score report.</p>
+
+        <h3>does checking credit score affect credit score?</h3>
+        <p>It depends upon who is checking your cibil report and why. For example, if you check your cibil score yourself, your credit score will not decrease, but if a lender or credit card issue pulls out your credit report, it might lower your credit score.</p>
+
+        <h3>how to check credit score in India?</h3>
+        <p>credit score in India ranges between 300-900 and are provided by four credit bureaus – TransUnion CIBIL, Equifax Credit Score, Experian Credit Score and CRIF Highmark Credit Score. you can check your cibil score on this page.</p>
+    </div>
+    <footer>
+        <h2>Need More Help?</h2>
+        <p>Call Us: +91 7870645478</p>
+        <p>Email: code404@yourloanwebsite.com</p>
+    </footer>
+</body>
+</html>

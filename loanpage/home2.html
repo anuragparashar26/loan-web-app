@@ -5,79 +5,206 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lendwise - Eligibility Criteria & Documents Required for Home Loan</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 0 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+        }
+
+        .name {
+            font-size: 30px;
+            color: #000;
+            margin-left: 10px;
+            margin-right: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+            padding: 6px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1faeaa;
+        }
+
+        .hide-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #FFFFFF; /* White background */
-            color: #000000; /* Black text */
+            padding: 80px 20px 20px; 
+            background-color: #FFFFFF;
+            color: #000000;
             line-height: 1.6;
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
         }
+
         h2 {
             font-size: 1.5em;
             font-weight: bold;
             margin-top: 20px;
             margin-bottom: 15px;
-            color: #000000; /* Black subheading */
-            background-color: #F5F5F5; /* Light gray background */
+            color: #000000;
+            background-color: #F5F5F5;
             padding: 10px;
-            border-left: 5px solid #800000; /* Maroon accent */
+            border-left: 5px solid #1faeaa;
             border-radius: 3px;
         }
+
         h3 {
             font-size: 1.2em;
             font-weight: bold;
             margin-top: 15px;
             margin-bottom: 10px;
-            color: #000000; /* Black heading */
+            color: #000000;
         }
+
         p {
             font-size: 1em;
             line-height: 1.5;
             margin-bottom: 20px;
-            color: #000000; /* Black paragraph text */
+            color: #000000;
         }
+
         ul {
             list-style-type: disc;
             padding-left: 20px;
         }
+
         li {
             font-size: 1em;
             line-height: 1.5;
             margin-bottom: 10px;
-            color: #000000; /* Black text */
+            color: #000000;
         }
+
         table {
             width: 100%;
+            max-width: 100%; 
             border-collapse: collapse;
             margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
             overflow: hidden;
         }
+
         th, td {
             padding: 12px;
             text-align: left;
-            border: 1px solid #DDDDDD; /* Light gray border */
+            border: 1px solid #DDDDDD;
         }
+
         th {
-            background-color: #E0E0E0; /* Light gray header */
+            background-color: #E0E0E0;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+
         tr:nth-child(even) {
-            background-color: #F9F9F9; /* Light gray for even rows */
+            background-color: #F9F9F9;
         }
+
         tr:nth-child(odd) {
-            background-color: #FFFFFF; /* White for odd rows */
+            background-color: #FFFFFF;
         }
+
         td {
             vertical-align: top;
+        }
+
+        footer {
+            background-color: #00456d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            margin-top: auto; 
+        }
+
+        footer h2 {
+            color: white;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 5px 0;
+            color: white;
+        }
+
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+
+            .nav-links {
+                margin-top: 10px;
+                gap: 15px;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+
+            table, th, td {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="../static/logo.png" alt="Logo">
+        </div>
+        <div class="name">
+            <a href="#pg1" class="hide-link">LendWise</a>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <div class="home">
+                <a href="../index.html" class="hide-link">Home</a>
+            </div>
+        </div>     
+    </header>
+
     <h2>Eligibility Criteria & Documents Required for Home Loan</h2>
     <p>Embarking on the journey to homeownership begins with understanding the documents required for Home Loan. By preparing your Home Loan documents meticulously, you set the stage for a straightforward and efficient loan application process.</p>
 
@@ -308,5 +435,11 @@
             </td>
         </tr>
     </table>
+
+    <footer>
+        <h1>Need More Help?</h1>
+        <p>Call Us: +91 7870645478</p>
+        <p>Email: code404@yourloanwebsite.com</p>
+    </footer>
 </body>
 </html>

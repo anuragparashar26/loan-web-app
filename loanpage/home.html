@@ -8,63 +8,121 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #FFFFFF; /* White background */
-            color: #000000; /* Black text */
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #000000;
         }
         h1 {
             font-size: 2.5em;
             font-weight: bold;
             margin-bottom: 10px;
-            color: #000000; /* Black heading */
+            color: #000000;
         }
         h2 {
             font-size: 1.5em;
             font-weight: bold;
             margin-top: 20px;
             margin-bottom: 10px;
-            color: #000000; /* Black subheading */
+            color: #000000;
         }
         p {
             font-size: 1em;
             line-height: 1.5;
             margin-bottom: 20px;
-            color: #000000; /* Black paragraph text */
+            color: #000000;
         }
         table {
+            border: #000000 1px solid;
             width: 50%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
+            border-radius: 10px;
+            margin: 0 auto 20px; 
         }
         th, td {
             padding: 10px;
             text-align: left;
-            border-bottom: 1px solid #DDDDDD; 
+            border-bottom: 1px solid #DDDDDD;
         }
         tr:nth-child(even) {
             background-color: #F2F2F2;
         }
         tr:nth-child(odd) {
-            background-color: #FFFFFF; 
+            background-color: #FFFFFF;
         }
 
+     
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 0 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        .logo {
+            flex-shrink: 0; 
+            margin-right: 10px;
+        }
+        .name {
+            font-family: "DM Sans", sans-serif;
+            font-size: 30px;
+            color: rgb(0, 0, 0);
+            margin: 0; 
+            margin-right: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+        .nav-links a:hover {
+            color: #1faeaa;
+        }
+        .home {
+            font-family: "DM Sans", sans-serif;
+            font-size: medium;
+            color: #000000;
+        }
+        .hide-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+    
+        .main-content {
+            margin-top: 50px;
+            padding: 20px; 
+            max-width: 1200px; 
+            margin-left: auto;
+            margin-right: auto; 
+        }
+
+       
         .eligibility-container {
             display: flex;
             justify-content: space-between;
             gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
         }
         .eligibility-tab {
             flex: 1;
             padding: 20px;
-            border: 2px solid #1faeaa; 
+            border: 2px solid #1faeaa;
             border-radius: 10px;
             background-color: #FFFFFF;
-            transition: background-color 0.3s ease; 
+            transition: background-color 0.3s ease;
         }
         .eligibility-tab:hover {
-            background-color: rgb(143, 240, 230); 
+            background-color: rgb(143, 240, 230);
             cursor: pointer;
         }
         .eligibility-tab h3 {
@@ -81,86 +139,39 @@
             font-size: 1em;
             line-height: 1.5;
             margin-bottom: 10px;
-            color: #000000; /* Black text */
+            color: #000000;
         }
+
+     
         .know-more-box {
             margin-top: 40px;
             text-align: center;
             padding: 20px;
-            border: 2px solid #1faeaa; /* Maroon border */
+            border: 2px solid #1faeaa;
             border-radius: 10px;
-            background-color: #FFFFFF; /* White background */
-            transition: background-color 0.3s ease; /* Smooth transition for hover */
+            background-color: #FFFFFF;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .know-more-box:hover {
-            background-color: rgb(143, 240, 230); ; /* Light maroon on hover */
+            background-color: rgb(143, 240, 230);
             cursor: pointer;
         }
         .know-more-box a {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #1faeaa; /* Maroon background */
-            color: #FFFFFF; /* White text */
+            background-color: #1faeaa;
+            color: #FFFFFF;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
         .know-more-box a:hover {
             background-color: rgb(143, 240, 230);
-            cursor: pointer;
         }
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #ffffff;
-            padding: 0 20px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-
-        .name {
-            font-family: "DM Sans", sans-serif;
-            font-size: 30px;
-            color: rgb(0, 0, 0);
-            padding: 5px;
-            margin-right: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            margin-right: 20px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            transition: color 0.2s ease, transform 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: #1faeaa;
-        }
-
-        .home {
-            font-family: "DM Sans", sans-serif;
-            font-size: medium;
-            color: #000000;
-            padding: 6px;
-        }
-
-        .hide-link {
-            text-decoration: none;
-            color: inherit;
-        }
 
         footer {
             background-color: #00456d;
@@ -168,23 +179,19 @@
             padding: 20px;
             text-align: center;
             width: 100%;
-            box-sizing: border-box; 
-            position: relative;
-            margin-left: auto;
+            box-sizing: border-box;
+            margin-top: 40px; 
         }
-
         footer h2 {
             color: white;
             font-size: 25px;
             margin-bottom: 10px;
         }
-
         footer p {
             color: white;
             font-size: 14px;
             margin: 5px 0;
         }
-
     </style>
 </head>
 <body>
@@ -201,65 +208,67 @@
             </div>
         </div>     
     </header>
-    <br>
-    <h1>Home Loan</h1>
-    <p>Fulfill your dream of owning a home with Lendwise Home Loans, offering housing loans starting at ₹3 lakh. Lendwise Home Loans come with a host of benefits, including affordable EMIs that allow you to spread out payments over a longer tenure, attractive interest rates, an easy application process, doorstep service, and more.</p>
-    
-    <h2>Home Loan Details</h2>
-    <table>
-        <tr>
-            <td><strong>Loan Amount</strong></td>
-            <td>Up to ₹5 crore</td>
-        </tr>
-        <tr>
-            <td><strong>Loan Tenure</strong></td>
-            <td>Up to 30 years</td>
-        </tr>
-        <tr>
-            <td><strong>Floating Interest Rate</strong></td>
-            <td>8.75% - 9.15%</td>
-        </tr>
-        <tr>
-            <td><strong>Fixed Interest Rate</strong></td>
-            <td>14%</td>
-        </tr>
-        <tr>
-            <td><strong>Processing Fee</strong></td>
-            <td>Up to 1% of the loan amount + GST (minimum ₹10,000)</td>
-        </tr>
-    </table>
 
-    <h2>Eligibility Criteria for Home Loans</h2>
-    <div class="eligibility-container">
-        <div class="eligibility-tab">
-            <h3>Salaried Individuals eligible for Home Loans</h3>
-            <ul>
-                <li>For salaried individuals, securing a Home Loan requires a stable employment history, typically within government sectors or reputed companies.</li>
-                <li>Applicants must be over 21 and under 65 years, or the age of retirement by the loan’s end.</li>
-                <li>Ensure all required documents for the Home Loan, including employment verification and financial stability proofs, are thoroughly checked, as they are key to a successful application.</li>
-            </ul>
+    <div class="main-content">
+        <h1>Home Loan</h1>
+        <p>Fulfill your dream of owning a home with Lendwise Home Loans, offering housing loans starting at ₹3 lakh. Lendwise Home Loans come with a host of benefits, including affordable EMIs that allow you to spread out payments over a longer tenure, attractive interest rates, an easy application process, doorstep service, and more.</p>
+        
+        <h2>Home Loan Details</h2>
+        <table>
+            <tr>
+                <td><strong>Loan Amount</strong></td>
+                <td>Up to ₹5 crore</td>
+            </tr>
+            <tr>
+                <td><strong>Loan Tenure</strong></td>
+                <td>Up to 30 years</td>
+            </tr>
+            <tr>
+                <td><strong>Floating Interest Rate</strong></td>
+                <td>8.75% - 9.15%</td>
+            </tr>
+            <tr>
+                <td><strong>Fixed Interest Rate</strong></td>
+                <td>14%</td>
+            </tr>
+            <tr>
+                <td><strong>Processing Fee</strong></td>
+                <td>Up to 1% of the loan amount + GST (minimum ₹10,000)</td>
+            </tr>
+        </table>
+
+        <h2>Eligibility Criteria for Home Loans</h2>
+        <div class="eligibility-container">
+            <div class="eligibility-tab">
+                <h3>Salaried Individuals eligible for Home Loans</h3>
+                <ul>
+                    <li>For salaried individuals, securing a Home Loan requires a stable employment history, typically within government sectors or reputed companies.</li>
+                    <li>Applicants must be over 21 and under 65 years, or the age of retirement by the loan’s end.</li>
+                    <li>Ensure all required documents for the Home Loan, including employment verification and financial stability proofs, are thoroughly checked, as they are key to a successful application.</li>
+                </ul>
+            </div>
+            <div class="eligibility-tab">
+                <h3>Professionals eligible for Home Loans</h3>
+                <ul>
+                    <li>Professional applicants, such as doctors, lawyers, chartered accountants, or management consultants etc., are welcome to apply for a Home Loan.</li>
+                    <li>The age limit is between 21 and 65 years.</li>
+                    <li>The Home Loan documents list extends to professional qualifications and proof of practice for these applicants to ensure credibility and a reliable repayment structure.</li>
+                </ul>
+            </div>
+            <div class="eligibility-tab">
+                <h3>Self-employed Individuals eligible for Home Loans</h3>
+                <ul>
+                    <li>Self-employed business owners and entrepreneurs looking to invest in property must ensure comprehensive documents required for a Home Loan application, showcasing consistent income through tax returns.</li>
+                    <li>Eligibility depends on being over 21 years at loan initiation and under 65 years at loan closure, with a strong financial record to support the application.</li>
+                </ul>
+            </div>
         </div>
-        <div class="eligibility-tab">
-            <h3>Professionals eligible for Home Loans</h3>
-            <ul>
-                <li>Professional applicants, such as doctors, lawyers, chartered accountants, or management consultants etc., are welcome to apply for a Home Loan.</li>
-                <li>The age limit is between 21 and 65 years.</li>
-                <li>The Home Loan documents list extends to professional qualifications and proof of practice for these applicants to ensure credibility and a reliable repayment structure.</li>
-            </ul>
-        </div>
-        <div class="eligibility-tab">
-            <h3>Self-employed Individuals eligible for Home Loans</h3>
-            <ul>
-                <li>Self-employed business owners and entrepreneurs looking to invest in property must ensure comprehensive documents required for a Home Loan application, showcasing consistent income through tax returns.</li>
-                <li>Eligibility depends on being over 21 years at loan initiation and under 65 years at loan closure, with a strong financial record to support the application.</li>
-            </ul>
+
+        <div class="know-more-box">
+            <a href="home2.html">Know More</a>
         </div>
     </div>
 
-    <div class="know-more-box">
-        <a href="home2.html">Know More</a>
-    </div>
-    <br>
     <footer>
         <h2>Need More Help?</h2>
         <p><i class="fas fa-phone"></i> Call Us: +91 7870645478</p>
