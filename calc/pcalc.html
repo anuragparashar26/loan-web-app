@@ -5,131 +5,231 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Loan EMI Calculator</title>
     <style>
+        html, body {
+            height: 100%; 
+            margin: 0; 
+            font-family: "DM Sans", sans-serif;
+        }
+
         body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
+            display: flex; /* Use flexbox */
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
 
-.container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 900px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 400px; 
+        }
 
-h2 {
-    text-align: center;
-    color: #333;
-}
+        h2 {
+            text-align: center;
+            color: #333;
+        }
 
-.calculator {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: stretch;
-}
+        .calculator {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: stretch;
+        }
 
-.input-section {
-    flex: 1;
-    padding: 10px;
-}
+        .input-section {
+            flex: 1;
+            padding: 10px;
+        }
 
-label {
-    display: block;
-    margin: 10px 0 5px;
-    color: #555;
-}
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
 
-input[type="range"] {
-    width: 100%;
-}
+        input[type="range"], input[type="number"] {
+            width: 100%;
+        }
 
-span {
-    display: block;
-    text-align: right;
-    color: #888;
-}
+        span {
+            display: block;
+            text-align: right;
+            color: #888;
+        }
 
-.emi-result {
-    flex: 0 0 200px;
-    background: #e0e0e0;
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+        .emi-result {
+            flex: 0 0 200px;
+            background: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-.emi-result h3 {
-    margin: 0 0 10px;
-    color: #333;
-}
+        .emi-result h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
 
-.emi-result p {
-    font-size: 24px;
-    color: #d32f2f;
-    margin: 10px 0;
-}
+        .emi-result p {
+            font-size: 24px;
+            color: #d32f2f;
+            margin: 10px 0;
+        }
 
-.emi-result button {
-    background: #d32f2f;
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        .emi-result button {
+            background: #d32f2f;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-.breakup {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
+        .breakup {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
 
-.breakup h3 {
-    color: #333;
-    margin: 0;
-}
+        .breakup h3 {
+            color: #333;
+            margin: 0;
+        }
 
-#paymentChart {
-    width: 200px !important;
-    height: 200px !important;
-    margin-right: 50px;
-}
+        #paymentChart {
+            width: 200px !important;
+            height: 200px !important;
+            margin-right: 50px;
+        }
 
-.breakup-details {
-    flex: 1;
-    margin-top: 0;
-}
+        .breakup-details {
+            flex: 1;
+            margin-top: 0;
+        }
 
-.breakup-details p {
-    margin: 5px 0;
-    color: #555;
-}
+        .breakup-details p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 0 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .name {
+            font-family: "DM Sans", sans-serif;
+            font-size: 30px;
+            color: rgb(0, 0, 0);
+            margin: 0;
+            margin-right: 950px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1faeaa;
+        }
+
+        .home {
+            font-family: "DM Sans", sans-serif;
+            font-size: medium;
+            color: #000000;
+            padding: 6px;
+        }
+
+        .hide-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        footer {
+            background-color: #00456d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+            box-sizing: border-box;
+            position: relative;
+            margin-top: 50px;
+            display: flex;
+        }
+
+        footer h2 {
+            color: white;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: white;
+            font-size: 14px;
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="../static/logo.png" style="height: 40px; width: 40px;">
+        </div>
+        <div class="name">
+            <a href="#pg1" class="hide-link">LendWise</a>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <div class="home">
+                <a href="../index.html" class="hide-link">Home</a>
+            </div>
+        </div>     
+    </header>
     <div class="container">
         <h2>Personal Loan EMI Calculator</h2>
         <div class="calculator">
             <div class="input-section">
                 <label>Loan Amount (₹)</label>
+                <input type="number" id="manualLoanAmount" value="50000" min="50000" max="500000" step="5000">
                 <input type="range" id="loanAmount" min="50000" max="500000" value="50000" step="5000">
                 <span id="loanValue">50,000</span>
 
                 <label>Interest Rate (p.a)</label>
-                <input type="range" id="interestRate" min="11" max="22" value="11.1" step="0.1">
-                <span id="interestValue">11.1%</span>
+                <input type="number" id="manualInterestRate" value="8" min="8" max="22" step="0.01">
+                <input type="range" id="interestRate" min="8" max="22" value="8" step="0.01">
+                <span id="interestValue">8%</span>
 
                 <label>Tenure (months)</label>
                 <input type="range" id="tenure" min="12" max="84" value="12" step="12">
@@ -151,73 +251,87 @@ span {
             </div>
         </div>
     </div>
+    
     <script>
-
-function calculateEMI(principal, rate, tenure) {
-    const monthlyRate = rate / 12 / 100;
-    const emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, tenure)) / 
-               (Math.pow(1 + monthlyRate, tenure) - 1);
-    return emi;
-}
-
-function updateValues() {
-    const loanAmount = parseFloat(document.getElementById('loanAmount').value);
-    const interestRate = parseFloat(document.getElementById('interestRate').value);
-    const tenure = parseFloat(document.getElementById('tenure').value);
-
-    document.getElementById('loanValue').textContent = loanAmount.toLocaleString();
-    document.getElementById('interestValue').textContent = `${interestRate}%`;
-    document.getElementById('tenureValue').textContent = tenure;
-
-    const emi = calculateEMI(loanAmount, interestRate, tenure).toFixed(2);
-    document.getElementById('emiValue').textContent = `₹${emi}`;
-
-    const totalPayable = emi * tenure;
-    const interestPayable = totalPayable - loanAmount;
-
-    document.getElementById('principalValue').textContent = `₹${loanAmount.toLocaleString()}`;
-    document.getElementById('interestPayable').textContent = `₹${interestPayable.toFixed(2)}`;
-    document.getElementById('totalPayable').textContent = `₹${totalPayable.toFixed(2)}`;
-
-    updateChart(loanAmount, interestPayable);
-}
-
-function updateChart(principal, interest) {
-    const ctx = document.getElementById('paymentChart').getContext('2d');
-    if (window.myChart) window.myChart.destroy();
-
-    window.myChart = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            datasets: [{
-                data: [principal, interest],
-                backgroundColor: ['#d32f2f', '#757575'],
-                borderWidth: 0
-            }]
-        },
-        options: {
-            circumference: 180,
-            rotation: -90,
-            cutout: '70%',
-            plugins: {
-                legend: { display: false }
-            }
+        function calculateEMI(principal, rate, tenure) {
+            const monthlyRate = rate / 12 / 100;
+            const emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, tenure)) / 
+                       (Math.pow(1 + monthlyRate, tenure) - 1);
+            return emi;
         }
-    });
-}
 
-// Initialize Chart.js
-const script = document.createElement('script');
-script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
-script.onload = () => {
-    updateValues();
-};
-document.head.appendChild(script);
+        function updateValues() {
+            const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+            const interestRate = parseFloat(document.getElementById('interestRate').value);
+            const tenure = parseFloat(document.getElementById('tenure').value);
 
-// Event listeners for input changes
-document.getElementById('loanAmount').addEventListener('input', updateValues);
-document.getElementById('interestRate').addEventListener('input', updateValues);
-document.getElementById('tenure').addEventListener('input', updateValues);
+            document.getElementById('loanValue').textContent = loanAmount.toLocaleString();
+            document.getElementById('interestValue').textContent = `${interestRate}%`;
+            document.getElementById('tenureValue').textContent = tenure;
+
+            const emi = calculateEMI(loanAmount, interestRate, tenure).toFixed(2);
+            document.getElementById('emiValue').textContent = `₹${emi}`;
+
+            const totalPayable = emi * tenure;
+            const interestPayable = totalPayable - loanAmount;
+
+            document.getElementById('principalValue').textContent = `₹${loanAmount.toLocaleString()}`;
+            document.getElementById('interestPayable').textContent = `₹${interestPayable.toFixed(2)}`;
+            document.getElementById('totalPayable').textContent = `₹${totalPayable.toFixed(2)}`;
+
+            updateChart(loanAmount, interestPayable);
+        }
+
+        function updateChart(principal, interest) {
+            const ctx = document.getElementById('paymentChart').getContext('2d');
+            if (window.myChart) window.myChart.destroy();
+
+            window.myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [principal, interest],
+                        backgroundColor: ['#d32f2f', '#757575'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    circumference: 180,
+                    rotation: -90,
+                    cutout: '70%',
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+        script.onload = () => {
+            updateValues();
+        };
+        document.head.appendChild(script);
+
+        document.getElementById('loanAmount').addEventListener('input', updateValues);
+        document.getElementById('interestRate').addEventListener('input', updateValues);
+        document.getElementById('tenure').addEventListener('input', updateValues);
+
+        document.getElementById('manualLoanAmount').addEventListener('input', function() {
+            const value = parseFloat(this.value);
+            document.getElementById('loanAmount').value = value;
+            updateValues();
+        });
+
+        document.getElementById('manualInterestRate').addEventListener('input', function() {
+            const value = parseFloat(this.value);
+            document.getElementById('interestRate').value = value;
+            updateValues();
+        });
     </script>
+    <footer>
+        <h2>Need More Help?</h2>
+        <p><i class="fas fa-phone"></i> Call Us: +91 7870645478</p>
+        <p><i class="fas fa-envelope"></i> Email: code404@yourloanwebsite.com</p>
+    </footer>
 </body>
 </html>
