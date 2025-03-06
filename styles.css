@@ -128,7 +128,8 @@ header {
     font-family: "DM Sans", sans-serif;
     font-size: 30px;
     color: rgb(0, 0, 0);
-    margin-right: 350px;
+    padding: 5px;
+    margin-right: auto;
 }
 
 .nav-links {
@@ -566,7 +567,7 @@ html {
         transition: transform 0.3s ease;
         margin-left: 10px;
     }
-    
+
     .bar {
         position: absolute;
         height: 2px;
