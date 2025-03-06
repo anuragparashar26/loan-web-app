@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LendWise</title>
+    <link rel="icon" href="static/logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="static/logo.png" style="height: 40px; width: 40px;">
+        </div>
+        <div class="name">
+            <a href="#pg1" class="hide-link">LendWise</a>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <div class="home">
+                <a href="#pg1" class="hide-link">Home</a>
+            </div>
+            <div class="about">
+                <a href="#pg2" class="hide-link"><span>Calculator</span></a>
+            </div>
+            <div class="projects">
+                <a href="#pg3" class="hide-link"><span>Steps to Apply</span></a>
+            </div>
+            <div class="certi">
+                <a href="#pg4" class="hide-link"><span>FAQs</span></a>
+            </div>
+            <div class="contact">
+                <a href="#pg4_2" class="hide-link"><span>Financial Tips</span></a>
+            </div>
+            <div class="contact">
+                <a href="#pg5" class="hide-link"><span>Contact</span></a>
+            </div>
+        </div>     
+    </header>
+    <div class="pg1" id="pg1">
+        <div class="title" data-aos="fade-up">
+                <b>👋 Hey, I am Your Personal Loan Advisor</b>
+                <h2>Ask me about anything<span id="dynamicText"></span></h2>
+            </div>
+        </div>       
+        
+    </div>
+
+    <div class="pg2" id="pg2">
+        <div class="section-header">
+            <h2>Loan Categories and Calculators</h2>
+            <div class="dash"></div>
+                <p class="section-description">Explore a variety of loan options tailored to your needs and plan your 
+                    finances effortlessly <br> with our easy-to-use loan calculators for EMI, affordability, and interest estimation.</p>
+        </div>
+        <br>
+        <div class="container">
+            <div class="loans">
+                <div class="card">
+                    <i class="fas fa-file-alt"></i>
+                    <h2>Personal Loan</h2>
+                    <cert-description>Quick and hassle-free personal loans tailored to meet your financial needs.</cert-description>
+                    <p><a href="loanpage/personal.html" class="btn">Know More</a></p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-home"></i>
+                    <h2>Home Loan</h2>
+                    <cert-description>Get the best home loan options with low interest rates and flexible repayment plans.</cert-description>
+                    <p><a href="loanpage/home.html" class="btn">Know More</a></p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-car"></i>
+                    <h2>Car Loan</h2>
+                    <cert-description>Drive your dream car with our low-interest and easy EMI car loan plans</cert-description>
+                    <p><a href="#" class="btn">Know More</a></p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-book"></i>
+                    <h2>Education Loan</h2>
+                    <cert-description>Fund your education with easy and affordable student loan solutions.</cert-description>
+                    <p><a href="#" class="btn">Know More</a></p>
+                </div>
+            </div>
+        
+            <div class="calculators">
+                <div class="tile">
+                    <h2>Personal Loan EMI Calculator</h2>
+                    <p><a href="calc/pcalc.html" class="btn">Calculate Now</a></p>
+                </div>
+                <div class="tile">
+                    <h2>Home Loan EMI Calculator</h2>
+                    <p><a href="calc/hcalc.html" class="btn">Calculate Now</a></p>
+                </div>
+                <div class="tile">
+                    <h2>Car Loan EMI Calculator</h2>
+                    <p><a href="calc/ccalc.html" class="btn">Calculate Now</a></p>
+                </div>
+                <div class="tile">
+                    <h2>Education Loan EMI Calculator</h2>
+                    <p><a href="calc/ecalc.html" class="btn">Calculate Now</a></p>
+                </div>
+            </div>
+        </div>
+        
+    
+    </div>
+
+    
+<div class="#pg3" id="pg3">
+    <br><br>
+    <div class="section-header">
+        <h2>Steps to Apply</h2>
+        <div class="dash"></div>
+            <p class="section-description">Easily apply for a loan in just a few simple steps – check eligibility, choose your loan, submit documents, and get quick approval.</p>
+    </div>
+    <div class="stepscontainer">
+        <div class="step">
+            <i class="fas fa-list-alt"></i>
+            <h2>Step 1: Choose Your Loan Type</h2>
+            <p>Select from Personal Loan, Home Loan, Car Loan, or Education Loan.</p>
+            <a href="#pg2" class="btn">Explore Loan Options</a>
+        </div>
+        <div class="step">
+            <i class="fas fa-check-circle"></i>
+            <h2>Step 2: Check Eligibility</h2>
+            <p>Ensure you meet the income, credit score, and employment criteria.</p>
+            <a href="el.html" class="btn">Check Eligibility</a>
+        </div>
+
+        <div class="step">
+            <i class="fas fa-file-alt"></i>
+            <h2>Step 3: Fill Out the Application</h2>
+            <p>Provide your details and select repayment tenure.</p>
+            <a href="#" class="btn">Apply Now</a>
+        </div>
+
+        <div class="step">
+            <i class="fas fa-upload"></i>
+            <h2>Step 4: Upload Required Documents</h2>
+            <p>Submit identity proof, address proof, and income proof.</p>
+            <a href="#" class="btn">View Document List</a>
+        </div>
+        <div class="step">
+            <i class="fas fa-clock"></i>
+            <h2>Step 5: Application Review & Approval</h2>
+            <p>Our team verifies your details and processes the loan.</p>
+            <p><strong>Approval in 24-48 hours!</strong></p>
+        </div>
+        <div class="step">
+            <i class="fas fa-money-check-alt"></i>
+            <h2>Step 6: Loan Disbursement</h2>
+            <p>Once approved, the amount is credited to your bank account.</p>
+            <a href="#" class="btn">Track Your Application</a>
+        </div>
+    </div>
+</div>
+
+    
+        
+    <div class="pg4" id="pg4"> 
+        <br><br>
+        <div class="section-header">
+            <h2>FAQs</h2>
+            <div class="dash"></div>
+                <p class="section-description">Find answers to common loan-related questions and get clarity on eligibility, interest rates, repayment, and more.</p>
+        </div>
+        <br>
+        <div class="faqcontainer">
+            
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">1. What types of loans can I apply for?</h3>
+                <p>You can apply for personal loans, home loans, car loans, and education loans based on your needs.</p>
+            </div>
+            
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">2. What are the eligibility criteria for a loan?</h3>
+                <p>Eligibility depends on your credit score, income, employment status, and other financial factors.</p>
+            </div>
+            
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">3. How can I check my loan eligibility?</h3>
+                <p>You can use our loan eligibility calculator or contact our support team for assistance.</p>
+            </div>
+            
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">4. What is the interest rate on loans?</h3>
+                <p>Interest rates vary depending on the type of loan, your credit profile, and market conditions.</p>
+            </div>
+            
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">5. How do I repay my loan?</h3>
+                <p>Loans can be repaid through EMIs via bank transfers, auto-debit, or online payment portals.</p>
+            </div>
+            
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">6. Can I prepay my loan?</h3>
+                <p>Yes, you can prepay your loan, but some loans may have prepayment penalties.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="pg4_2" id="pg4_2"> 
+        <br><br>
+        <div class="section-header">
+            <h2>Financial Tips</h2>
+            <div class="dash"></div>
+                <p class="section-description">Stay informed with expert financial tips to manage your loans wisely, improve credit scores, and achieve your financial goals.</p>
+        </div>
+        <br>
+        <section id="certs">
+            <div class="certs-grid">
+              <div class="certs-card" data-aos="fade-up">
+                <div class="cert-image">
+                    <img src="static/tips.png" class="cert-image">
+                </div>
+                <h3 class="cert-title">Tip #1</h3>
+                <h3>
+                    <b>Saving Strategies</b><br>
+                </h3>
+                
+                <p class="cert-description">• Save 20% of your monthly income by setting up an automatic transfer to a savings account—it’s easier than you think! <br><br>
+                    • Start small: Save ₹5 a day (e.g., skip a coffee) and watch it grow to ₹150 a month! <br><br>
+                    • Create an emergency fund with 3-6 months of living expenses to prepare for unexpected costs. <br><br>
+                    • Use a budgeting app to track your spending and identify areas where you can save more.</p>
+              </div>
+              <div class="certs-card" data-aos="fade-up">
+                <div class="cert-image">
+                    <img src="static/tips.png" class="cert-image">
+                </div>
+                <h3 class="cert-title">Tip #2</h3>
+                <h3>
+                    <b>Improving Credit Scores</b> <br>
+                </h3>
+                <p class="cert-description"> • Check your credit score for free on [website/API] once a year to stay on top of your financial health. <br><br>
+                    • Pay your bills on time—set reminders or automate payments to avoid late fees and credit score drops. <br><br>
+                    •Keep your credit card balance below 30% of your limit to boost your credit utilization ratio. <br><br>
+                    • Avoid opening too many new credit accounts at once—it can temporarily lower your score.
+                    </p>
+              </div>
+              <div class="certs-card" data-aos="fade-up">
+                <div class="cert-image">
+                    <img src="static/tips.png" class="cert-image">
+                </div>
+                <h3 class="cert-title">Tip #3</h3>
+                <h3>
+                    <b>Managing Debt</b>
+                </h3>
+                <p class="cert-description">• Focus on paying off high-interest debt first, like credit card balances, to save money on interest. <br><br>
+                    • Consolidate multiple loans into one with a lower interest rate if possible—ask your bank for options. <br><br>
+                    • Create a debt repayment plan: Pay more than the minimum on your loans to reduce interest over time. <br><br>
+                    • Avoid taking on new debt while paying off existing loans to stay financially stable.
+                    </p>
+              </div>
+              <div class="certs-card" data-aos="fade-up">
+                <div class="cert-image">
+                    <img src="static/tips.png" class="cert-image">
+                </div>
+                <h3 class="cert-title">Tip #4</h3>
+                <h3>
+                    <b>General Financial Wellness</b>
+                </h3>
+                <p class="cert-description">• Track your monthly expenses for a week—small changes, like cutting unused subscriptions, can add up! <br><br>
+                    • Set short-term financial goals, like saving ₹500 for a vacation, to stay motivated. <br><br>
+                    • Learn about compound interest: Saving early can grow your money significantly over time! <br><br>
+                    • Compare loan options before applying—look for the lowest interest rates and best terms.
+                    </p>
+              </div>    
+              <div class="certs-card" data-aos="fade-up">
+                <div class="cert-image">
+                    <img src="static/tips.png" class="cert-image">
+                </div>
+                <h3 class="cert-title">Tip #5</h3>
+                <h3>
+                    <b>Loan-Specific Tips</b>
+                </h3>
+                <p class="cert-description">• Before applying for a loan, check your credit report for errors that could affect your approval.<br><br>
+                    • Read the fine print on loan agreements—understand interest rates, fees, and repayment terms.<br><br>
+                    • Avoid borrowing more than you can comfortably repay—use a loan calculator to estimate payments.<br><br>
+                    • Maintain a good credit score while repaying your loan to qualify for better rates in the future.
+                    </p>
+              </div>
+            </div>
+          </section>
+    </div>
+
+    <div class="pg5" id="pg5">
+        <div class="contact-form-container">
+            <div class="section-header-contact">
+                <h2>Contact Us</h2>
+                <div class="dash"></div>
+                <p class="section-description">Feel free to reach out with any questions or if you need any help.</p>
+            </div>
+            
+            <form action="https://formspree.io/f/xjkvkdgq" method="POST" id="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required minlength="3">
+              
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" maxlength="50">
+              
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+              
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <h2>Need More Help?</h2>
+        <p><i class="fas fa-phone"></i> Call Us: +91 7870645478</p>
+        <p><i class="fas fa-envelope"></i> Email: code404@yourloanwebsite.com</p>
+</footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
+</body>
+</html>
