@@ -1,4 +1,4 @@
-const API_URL = "https://final-loanwebapp.onrender.com";
+const API_URL = "https://loanappfinal.onrender.com";
 
 fetch(`${API_URL}/api/data`)
   .then(res => res.json())
