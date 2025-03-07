@@ -666,21 +666,6 @@ html {
     }
 }
 
-#dynamicText {
-    display: inline-block;
-    border-right: 2px solid rgb(255, 255, 255);
-    padding-right: 5px;
-    font-size: 1.2em;
-    font-weight: bold;
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-    0% { border-color: transparent; }
-    50% { border-color: rgb(255, 255, 255); }
-    100% { border-color: transparent; }
-}
-
 
 .container {
     display: flex;
@@ -701,8 +686,11 @@ html {
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 200px;
+    max-width: 200px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card i {
@@ -807,6 +795,9 @@ h1 {
     width: 300px;
     text-align: center;
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .step i {
