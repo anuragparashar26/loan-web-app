@@ -1,3 +1,9 @@
+const API_URL = "https://final-loanwebapp.onrender.com";
+fetch(`${API_URL}/api/data`)
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+
 function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
     const hamburger = document.getElementById('hamburger');
