@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Loan Details and FAQs</title>
+    <style>
+
+header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 0 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+        }
+
+        .name {
+            font-size: 30px;
+            color: #000;
+            margin-left: 10px;
+            margin-right: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+            padding: 6px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1faeaa;
+        }
+
+        .hide-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        footer {
+            background-color: #00456d;
+            color: white;
+            text-align: center;
+            width: 100%;
+            margin-top: auto; 
+        }
+
+        footer h1 {
+            color: white;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 5px 0;
+            color: white;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            margin: 0;
+            padding: 80px 20px 20px; 
+            background-color: #FFFFFF;
+            color: #000000;
+            line-height: 1.6;
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+
+            .nav-links {
+                margin-top: 10px;
+                gap: 15px;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+
+            table, th, td {
+                font-size: 0.9em;
+            }
+        }
+
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        fh1 {
+            color: #333;
+            border-bottom: 2px solid #1faeaa;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #1faeaa;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+        p, li {
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #1faeaa;
+            color: white;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .toggle-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .toggle-buttons a {
+            color: #1faeaa;
+            text-decoration: none;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .toggle-buttons a:hover {
+            text-decoration: underline;
+        }
+        .faq {
+            margin-bottom: 15px;
+        }
+        .faq-question {
+            background-color: #1faeaa;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0;
+        }
+        .faq-answer {
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            display: none;
+        }
+        .faq-answer.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../static/logo.png" alt="Logo">
+        </div>
+        <div class="name">
+            <a href="#pg1" class="hide-link">LendWise</a>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <div class="home">
+                <a href="../index.html" class="hide-link">Home</a>
+            </div>
+        </div>     
+    </header>
+    <div class="container">
+        <h1>Car Loan Details and FAQs</h1>
+
+        <h2>Car Loan Eligibility</h2>
+        <p>Car Loan eligibility criteria for diverse applicants:</p>
+        <ul>
+            <li><strong>Salaried Individuals:</strong> Must be aged between 20 and 65 years with a minimum monthly income of Rs 30,000.</li>
+            <li><strong>Self-Employed Individuals:</strong> Must be aged between 21 and 70 years. An existing relationship with Lendwise is advantageous.</li>
+        </ul>
+
+        <h2>Car Loan Interest Rates</h2>
+        <p>Lendwise offers easy Car Loans at competitive interest rates. You can take advantage of these rates to get your dream car with manageable monthly payments.</p>
+        <table>
+            <tr>
+                <th>Loan Type</th>
+                <th>Tenure (12-35 months)</th>
+                <th>Tenure (36-84 months)</th>
+            </tr>
+            <tr>
+                <td>New Car Loans</td>
+                <td>10.20%* onwards, based on CIBIL Score and Car Segment</td>
+                <td>9.10%* onwards, based on CIBIL Score and Car Model</td>
+            </tr>
+            <tr>
+                <td>Used Car Loans</td>
+                <td>11.25%* onwards, based on CIBIL Score and Car Segment</td>
+                <td>-</td>
+            </tr>
+        </table>
+
+        <h2>Car Loan Documents</h2>
+        <p>Lendwise simplifies Car Loan applications with a clear and comprehensive Car Loan Documents List. Summary of the documents is given below:</p>
+        <ul>
+            <li>KYC details</li>
+            <li>Address proof</li>
+            <li>Income evidence</li>
+            <li>Proof of business or employment stability</li>
+        </ul>
+        <p><strong>Additional Requirements:</strong></p>
+        <ul>
+            <li><strong>Salaried Individuals:</strong> Need recent Salary Slips.</li>
+            <li><strong>Self-Employed Applicants:</strong> Must provide Financial Statements or Income Tax Returns.</li>
+        </ul>
+        <p>This streamlined process ensures a quick and stress-free Car Loan application process.</p>
+
+        <h2>Car Loan Interest Rate FAQs</h2>
+        <div class="toggle-buttons">
+            <a onclick="toggleAll(true)">Expand All</a> | <a onclick="toggleAll(false)">Close All</a>
+        </div>
+
+        <div class="faq">
+            <h2 class="faq-question">What are the two types of car loan rates?</h2>
+            <div class="faq-answer">
+                <p>Car Loan interest rate is of two types: Fixed interest rate and Floating interest rate.</p>
+                <p>A Fixed interest rate remains constant throughout the repayment tenure. On the other hand, a Floating interest rate will fluctuate as per the market conditions. You can choose either of them depending on your financial feasibility.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2 class="faq-question">What is Car Loan Interest Rate?</h2>
+            <div class="faq-answer">
+                <p>A Car Loan interest rate is expressed as Annual Percentage Rate (APR) and is based on a variety of factors. It is charged by the lender on the loan amount availed by the borrower to purchase a car. Although the type of car purchased does not directly influence the rate, its price may. Lendwise offers competitive rates, ensuring lower EMIs, minimal paperwork and quick disbursement for financing your car.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2 class="faq-question">How does the tenure affect my Car Loan Interest Rate?</h2>
+            <div class="faq-answer">
+                <p>If the tenure of your Car Loan is short, the Car Loan Interest Rate will be higher as compared to a longer tenure. If we increase the tenure, the Car Loan repayment is spread over a longer time, thus decreasing the EMI to be paid each month.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2 class="faq-question">Will the Car Loan interest be Fixed or floating?</h2>
+            <div class="faq-answer">
+                <p>The Car Loan interest will be Fixed i.e. the rate will stay constant for the entire duration of the Loan. Market changes will have no effect on the fixed interest rates.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2 class="faq-question">Is a guarantor required while applying for a Car Loan?</h2>
+            <div class="faq-answer">
+                <p>While applying for a Lendwise Car Loan one does not require a guarantor. However, an applicant with a limited credit history or low income may be required to present a guarantor to get quick loan approval.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2 class="faq-question">What is the ideal tenure for availing a Car Loan?</h2>
+            <div class="faq-answer">
+                <p>Lendwise offers flexible tenure ranging from 1 year to 7 years. However, the ideal tenure for availing a Car Loan depends on the individual preferences and other factors like budget, repayment capacity etc.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2 class="faq-question">What are the other types of loans offered by Lendwise, apart from Car Loan?</h2>
+            <div class="faq-answer">
+                <p>Besides Car Loan, Lendwise offers various types of loans such as Personal Loans that are tailored to individual requirements, Business Loans to support entrepreneurial ventures and Home Loans for purchasing or constructing residential properties. With flexible tenures and competitive interest rates, Lendwise offers a diverse range of financing solutions to meet various needs.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h1>Need More Help?</h1>
+        <p>Call Us: +91 7870645478</p>
+        <p>Email: code404@yourloanwebsite.com</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+            });
+        });
+
+        
+        function toggleAll(expand) {
+            document.querySelectorAll('.faq-answer').forEach(answer => {
+                if (expand) {
+                    answer.classList.add('active');
+                } else {
+                    answer.classList.remove('active');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
