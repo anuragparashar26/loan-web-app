@@ -1,0 +1,17 @@
+#chatButton {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #068376;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+

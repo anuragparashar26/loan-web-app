@@ -1,0 +1,219 @@
+/* assistant.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0a2f2d;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatbot-container {
+    width: 600px;
+    background: rgba(20, 45, 45, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.chatbot-header {
+    background: #1faeaa;
+    color: #e9ecef;
+    padding: 20px;
+    text-align: center;
+}
+
+.chatbot-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.chatbot-body {
+    height: 500px;
+    padding: 25px;
+    overflow-y: auto;
+    background: #e9ecef;
+    scrollbar-width: thin;
+    scrollbar-color: #1faeaa #e9ecef;
+}
+
+.chatbot-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chatbot-body::-webkit-scrollbar-thumb {
+    background: #1faeaa;
+    border-radius: 4px;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    max-width: 85%;
+    padding: 12px 18px;
+    border-radius: 15px;
+    animation: fadeIn 0.3s ease;
+    position: relative;
+}
+
+.bot-message {
+    background: #1faeaa;
+    color: #e9ecef;
+    align-self: flex-start;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-message {
+    background: #147d79;
+    color: #e9ecef;
+    align-self: flex-end;
+    flex-direction: row-reverse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+.chatbot-footer {
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    background: rgba(20, 45, 45, 0.95);
+    align-items: center;
+}
+
+.input-send-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #e9ecef;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid #1faeaa;
+    transition: border-color 0.3s ease;
+}
+
+.input-send-container:focus-within {
+    border-color: #f4a261;
+}
+
+#user-input {
+    flex: 1;
+    padding: 12px 18px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #0a2f2d;
+    font-size: 1.1rem;
+}
+
+#user-input::placeholder {
+    color: #147d79;
+}
+
+#send-btn {
+    padding: 12px 25px;
+    background: #1faeaa;
+    color: #e9ecef;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1.1rem;
+}
+
+#send-btn:hover {
+    background: #147d79;
+}
+
+#language {
+    padding: 12px 15px;
+    border-radius: 25px;
+    border: 1px solid #1faeaa;
+    background: #2a9d8f;
+    color: #e9ecef;
+    font-size: 1.1rem;
+    cursor: pointer;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="white" viewBox="0 0 16 16"><path d="M8 12L0 4h16L8 12z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 35px;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+#language:hover {
+    background: #1faeaa;
+}
+
+#language:focus {
+    border-color: #f4a261;
+    outline: none;
+}
+
+#language option {
+    background: #2a9d8f;
+    color: #e9ecef;
+}
+
+#voice-btn {
+    padding: 12px;
+    background: #2a9d8f;
+    color: #e9ecef;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+#voice-btn:hover {
+    background: #1faeaa;
+}
+
+#voice-btn.recording {
+    background: #f4a261;
+    animation: pulse 1s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+    .chatbot-container {
+        width: 90%;
+    }
+}

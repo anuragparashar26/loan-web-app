@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assistant.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Loan Assistant</title>
+</head>
+<body>
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h2>Loan Assistant</h2>
+        </div>
+        <div class="chatbot-body">
+            <div class="message-container">
+                <div class="message bot-message">
+                    <span class="icon bot-icon"><i class="fa-solid fa-robot" style="color: #ffffff;"></i></span>
+                    <p>Hi! I am your personal guide. You can ask me anything related to loans!</p>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <div class="input-send-container">
+                <input type="text" id="user-input" placeholder="Type your query...">
+                <button id="send-btn">Send</button>
+            </div>
+            <select id="language">
+                <option value="en-IN">English</option>
+                <option value="hi-IN">Hindi</option>
+                <option value="kn-IN">Kannada</option>
+                <option value="bn-IN">Bengali</option>
+            </select>
+            <button id="voice-btn" title="Toggle Voice Input"><i class="fa-solid fa-microphone" style="color: #ffffff;"></i></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="assistant.js"></script>
+</body>
+</html>

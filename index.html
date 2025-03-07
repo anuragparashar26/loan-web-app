@@ -6,6 +6,7 @@
     <title>LendWise</title>
     <link rel="icon" href="static/logo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chatbot.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
@@ -28,7 +29,7 @@
                 <a href="#pg1" class="hide-link">Home</a>
             </div>
             <div class="about">
-                <a href="#pg2" class="hide-link"><span>Calculators</span></a>
+                <a href="#pg2" class="hide-link"><span>Calculator</span></a>
             </div>
             <div class="projects">
                 <a href="#pg3" class="hide-link"><span>Steps to Apply</span></a>
@@ -61,7 +62,7 @@
                     finances effortlessly <br> with our easy-to-use loan calculators for EMI, affordability, and interest estimation.</p>
         </div>
         <br>
-        <div class="container" data-aos="fade-up">
+        <div class="container">
             <div class="loans">
                 <div class="card">
                     <i class="fas fa-file-alt"></i>
@@ -89,22 +90,22 @@
                 </div>
             </div>
         
-            <div class="calculators" data-aos="fade-up">
+            <div class="calculators">
                 <div class="tile">
                     <h2>Loan EMI Calculator</h2>
                     <p><a href="emicalc.html" class="btn">Calculate Now</a></p>
                 </div>
                 <div class="tile">
                     <h2>Interest Rate of Different Banks</h2>
-                    <p><a href="comp.html" class="btn">Calculate Now</a></p>
+                    <p><a href="comp.html" class="btn">Check Now</a></p>
                 </div>
                 <div class="tile">
                     <h2>Information on Cibil Score</h2>
-                    <p><a href="cibil.html" class="btn">Calculate Now</a></p>
+                    <p><a href="cibil.html" class="btn">Know More</a></p>
                 </div>
                 <div class="tile">
-                    <h2>TO BE ADDED</h2>
-                    <p><a href="#" class="btn">Calculate Now</a></p>
+                    <h2>Home Loan Prediction</h2>
+                    <p><a href="#" class="btn">Predict Now</a></p>
                 </div>
             </div>
         </div>
@@ -120,7 +121,7 @@
         <div class="dash"></div>
             <p class="section-description">Easily apply for a loan in just a few simple steps – check eligibility, choose your loan, submit documents, and get quick approval.</p>
     </div>
-    <div class="stepscontainer" data-aos="fade-up">
+    <div class="stepscontainer">
         <div class="step">
             <i class="fas fa-list-alt"></i>
             <h2>Step 1: Choose Your Loan Type</h2>
@@ -138,14 +139,12 @@
             <i class="fas fa-file-alt"></i>
             <h2>Step 3: Fill Out the Application</h2>
             <p>Provide your details and select repayment tenure.</p>
-            <a href="#" class="btn">Apply Now</a>
         </div>
 
         <div class="step">
             <i class="fas fa-upload"></i>
             <h2>Step 4: Upload Required Documents</h2>
             <p>Submit identity proof, address proof, and income proof.</p>
-            <a href="#" class="btn">View Document List</a>
         </div>
         <div class="step">
             <i class="fas fa-clock"></i>
@@ -157,7 +156,6 @@
             <i class="fas fa-money-check-alt"></i>
             <h2>Step 6: Loan Disbursement</h2>
             <p>Once approved, the amount is credited to your bank account.</p>
-            <a href="#" class="btn">Track Your Application</a>
         </div>
     </div>
 </div>
@@ -172,7 +170,7 @@
                 <p class="section-description">Find answers to common loan-related questions and get clarity on eligibility, interest rates, repayment, and more.</p>
         </div>
         <br>
-        <div class="faqcontainer" data-aos="fade-up">
+        <div class="faqcontainer">
             
             <div class="faq">
                 <h3 onclick="toggleAnswer(this)">1. What types of loans can I apply for?</h3>
@@ -317,12 +315,18 @@
         </div>
     </div>
 
+
+    <!-- chat bot area -->
+    <button id="chatButton"><i class="fa-solid fa-robot fa-bounce fa-xl" style="color: #ffffff;"></i></button>
+
     <footer>
         <h2>Need More Help?</h2>
         <p><i class="fas fa-phone"></i> Call Us: +91 7870645478</p>
         <p><i class="fas fa-envelope"></i> Email: code404@yourloanwebsite.com</p>
 </footer>
     <script src="script.js"></script>
+    <script src="server.js"></script>
+    <script>fetch("https://final-loanwebapp.onrender.com/")</script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script> AOS.init(); </script>
 </body>
