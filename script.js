@@ -1,4 +1,4 @@
-const API_URL = "https://final-loanwebapp.onrender.com"; // No extra "/api/server"
+const API_URL = "https://loan-web-app-orcin.vercel.app"; // No extra "/api/server"
 
 fetch(`${API_URL}/api/data`)
   .then(res => res.json())
