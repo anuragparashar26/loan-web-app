@@ -175,8 +175,3 @@ trainModel()
         console.error("Failed to start server due to training error:", error);
         process.exit(1);
     });
-
-    module.exports = (req, res) => {
-        res.status(200).json({ message: "Hello from API!" });
-    };
-    
