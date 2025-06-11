@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollToBottom();
 
         try {
-            const response = await fetch('https://loan-web-app-backend.onrender.com', {
+            const response = await fetch('https://loan-web-app-backend.onrender.com/api/loan-advice', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
