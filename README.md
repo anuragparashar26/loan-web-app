@@ -26,8 +26,6 @@ LendWise is a multilingual loan advisor application that helps users explore, co
 ```
 loan-web-app/
 ├── backend/
-│   ├── templates/index.js
-│   ├── app.py
 │   ├── loan_approval_dataset.csv
 │   ├── loan_ml.py
 │   └── server.js
