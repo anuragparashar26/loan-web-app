@@ -1,11 +1,3 @@
-const API_URL = "https://loanappfinal.onrender.com";
-
-fetch(`${API_URL}/api/data`)
-  .then(res => res.json())
-  .then(data => console.log(data))
-  .catch(error => console.error("Error fetching data:", error));
-
-
 function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
     const hamburger = document.getElementById('hamburger');
@@ -32,5 +24,5 @@ function toggleAnswer(element) {
 }
 
 document.getElementById("chatButton").onclick = function() {
-    window.location.href = "assistant.html";
+    window.location.href = "./assistant/assistant.html";
   };
