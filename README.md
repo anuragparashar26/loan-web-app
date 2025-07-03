@@ -25,26 +25,43 @@ LendWise is a multilingual loan advisor application that helps users explore, co
 
 ```
 loan-web-app/
+├── .gitignore
+├── README.md
 ├── backend/
+│   ├── .env.example
 │   ├── loan_approval_dataset.csv
 │   ├── loan_ml.py
+│   ├── package-lock.json
+│   ├── package.json
 │   └── server.js
-├── frontend/
-│   ├── assistant/
-│   │   ├── assistant.html
-│   │   └── assistant.js
-│   ├── loanpage/
-│   │   ├── education.html
-│   │   └── ...
-│   └── templates/
-│       ├── emicalc.html
-│       ├── loancomparison.html
-│       ├── cibil.html
-│       └── home_loan.js
-│   ├── chatbot.css
-│   ├── index.html
-│   ├── script.js
-|   └── styles.css
+└── frontend/
+    ├── assistant/
+    │   ├── assistant.css
+    │   ├── assistant.html
+    │   └── assistant.js
+    ├── chatbot.css
+    ├── index.html
+    ├── loanpage/
+    │   ├── car.html
+    │   ├── education.html
+    │   ├── education2.html
+    │   ├── home.html
+    │   ├── home2.html
+    │   └── personal.html
+    ├── script.js
+    ├── static/
+    │   ├── logo.png
+    │   └── tips.png
+    ├── styles.css
+    └── templates/
+        ├── cibil.html
+        ├── el.css
+        ├── eligibility.html
+        ├── emicalc.html
+        ├── home_loan.css
+        ├── home_loan.html
+        ├── home_loan.js
+        └── loancomparison.html
 ```
 ---
 
