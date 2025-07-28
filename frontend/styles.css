@@ -42,12 +42,19 @@ footer {
     align-items: center;
     min-height: 100vh;
 }
-.pg2, .pg4 {
+.pg2 {
     background-color: #ffffff;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     border-bottom: 1px solid white;   
+}
+
+.pg4{
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;  
 }
 
 .pg3 {
@@ -552,13 +559,6 @@ html {
         display: block;
         margin-left: 150px;
     }
-    
-    .dark-toggle {
-        margin-left: auto;
-        margin-right: 15px;
-        margin-top: 6px;
-
-    }
 
     .title {
         justify-content: center;
@@ -588,19 +588,6 @@ html {
         text-align: center; 
     }
 
-    .dark-mode .nav-links.active {
-        background-color: #1f1f1f;
-       
-    }
-
-    .dark-mode .nav-links a {
-        color: white;
-
-    }
-
-    .dark-mode .hamburger {
-        color: white;
-    }
     
     .name {
         margin-left: 0;
