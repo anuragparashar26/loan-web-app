@@ -28,9 +28,7 @@ loan-web-app/
 ├── .gitignore
 ├── README.md
 ├── backend/
-│   ├── .env.example
 │   ├── loan_approval_dataset.csv
-│   ├── loan_ml.py
 │   ├── package-lock.json
 │   ├── package.json
 │   └── server.js
@@ -55,12 +53,8 @@ loan-web-app/
     ├── styles.css
     └── templates/
         ├── cibil.html
-        ├── el.css
         ├── eligibility.html
         ├── emicalc.html
-        ├── home_loan.css
-        ├── home_loan.html
-        ├── home_loan.js
         └── loancomparison.html
 ```
 ---
