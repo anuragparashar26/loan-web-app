@@ -99,6 +99,14 @@
             color: inherit;
         }
 
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: #000;
+            cursor: pointer;
+        }
     
         .main-content {
             margin-top: 50px;
@@ -197,15 +205,30 @@
         @media (max-width: 768px) {
             header {
                 padding: 0 20px;
-                flex-direction: column;
-                height: auto;
             }
 
             .nav-links {
-                margin-top: 10px;
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #fff;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 10px 0;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links a {
+                padding: 10px 20px;
+                text-align: center;
+                width: 100%;
+            }
+            .hamburger {
+                display: block;
+                margin-left: auto;
             }
 
             .name {
@@ -213,7 +236,7 @@
             }
 
             .main-content {
-                margin-top: 120px;
+                margin-top: 150px;
             }
 
             .eligibility-container {
@@ -256,6 +279,9 @@
                 <a href="home2.html" class="hide-link">Documents Required</a>
             </div>
         </div>     
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
     </header>
 
     <div class="main-content">
@@ -323,5 +349,18 @@
         <p><i class="fas fa-phone"></i> Call Us: +91 XXXXXXXXXX</p>
         <p><i class="fas fa-envelope"></i> Email: code404@yourloanwebsite.com</p>
     </footer>
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+
+        document.querySelectorAll('#navLinks a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

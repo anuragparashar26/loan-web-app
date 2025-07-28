@@ -212,8 +212,34 @@ body {
     100% { transform: scale(1); }
 }
 
+@media (max-width: 600px) {
+    .chatbot-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        max-height: 100vh;
+    }
+    .chatbot-body {
+        height: calc(100vh - 150px);
+    }
+    .chatbot-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .input-send-container, #language {
+        width: 100%;
+    }
+}
+
 @media (max-width: 480px) {
     .chatbot-container {
-        width: 90%;
+        width: 100%;
+        font-size: 14px;
+    }
+    .chatbot-header h2 {
+        font-size: 1.5rem;
+    }
+    #user-input, #send-btn, #language {
+        font-size: 1rem;
     }
 }

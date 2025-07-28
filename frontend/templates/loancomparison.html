@@ -189,6 +189,14 @@
         tr:last-child td {
             border-bottom: none;
         }
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: #000;
+            cursor: pointer;
+        }
         footer {
             background-color: #00456d;
             color: white;
@@ -215,6 +223,29 @@
         @media (max-width: 768px) {
             header {
                 padding: 0 20px;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #fff;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 10px 0;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links a {
+                padding: 10px 20px;
+                text-align: center;
+                width: 100%;
+            }
+            .hamburger {
+                display: block;
+                margin-left: auto;
             }
             .container {
                 margin: 70px 10px 20px;
@@ -272,6 +303,9 @@
                 <a href="eligibility.html" class="hide-link">Eligibility</a>
             </div>
         </div>     
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
     </header>
     <div class="container">
         <h1>Loan Comparison Tool</h1>
@@ -308,17 +342,19 @@
         <p class="error" id="errorMessage"></p>
 
         <h2 id="resultsHeader" style="display: none;">Comparison Results</h2>
-        <table id="resultsTable">
-            <thead>
-                <tr>
-                    <th>Bank Name</th>
-                    <th>Interest Rate</th>
-                    <th>Monthly Payment</th>
-                    <th>Total Interest Paid</th>
-                </tr>
-            </thead>
-            <tbody id="resultsBody"></tbody>
-        </table>
+        <div class="table-responsive">
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Bank Name</th>
+                        <th>Interest Rate</th>
+                        <th>Monthly Payment</th>
+                        <th>Total Interest Paid</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsBody"></tbody>
+            </table>
+        </div>
     </div>
     <footer>
         <h2>Need More Help?</h2>
@@ -443,6 +479,18 @@
         } else {
             console.error("Form element not found!");
         }
+
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+
+        document.querySelectorAll('#navLinks a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>

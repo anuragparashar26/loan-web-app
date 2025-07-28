@@ -43,7 +43,10 @@
             <div class="contact">
                 <a href="#pg5" class="hide-link"><span>Contact</span></a>
             </div>
-    </div> 
+        </div> 
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
     </header>
     <div class="pg1" id="pg1">
         <div class="title" data-aos="fade-up">
@@ -237,7 +240,7 @@
                 <h3>
                     <b>Improving Credit Scores</b> <br>
                 </h3>
-                <p class="cert-description"> • Check your credit score for free on [website/API] once a year to stay on top of your financial health. <br><br>
+                <p class="cert-description"> • Check your credit score for free on cibil.com once a year to stay on top of your financial health. <br><br>
                     • Pay your bills on time—set reminders or automate payments to avoid late fees and credit score drops. <br><br>
                     •Keep your credit card balance below 30% of your limit to boost your credit utilization ratio. <br><br>
                     • Avoid opening too many new credit accounts at once—it can temporarily lower your score.
@@ -325,6 +328,19 @@
         <p><i class="fas fa-envelope"></i> Email: code404@yourloanwebsite.com</p>
 </footer>
     <script src="script.js"></script>
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+
+        document.querySelectorAll('#navLinks a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+    </script>
     <script src="server.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>

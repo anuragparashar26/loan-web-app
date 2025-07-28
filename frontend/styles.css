@@ -162,6 +162,11 @@ header {
 
 .hamburger {
     display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
 }
 
 /*Page2*/
@@ -521,6 +526,32 @@ html {
 
 
 @media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links a {
+        padding: 10px 20px;
+        text-align: center;
+        width: 100%;
+    }
+    .hamburger {
+        display: block;
+        margin-left: 150px;
+    }
     
     .dark-toggle {
         margin-left: auto;
@@ -532,6 +563,7 @@ html {
     .title {
         justify-content: center;
         margin: auto;
+        font-size: 36px;
     }
     
     .nav-links {
@@ -540,15 +572,13 @@ html {
         display: none; 
         flex-direction: column;
         position: absolute; 
-        top: 70px; 
+        top: 60px; 
         right: 0;
-        background-color: #000000;
+        background-color: #ffffff;
         width: 100%;
         z-index: 1; 
-        flex-direction: column;
         margin-right: 0;
-        margin-top: 10px;
-        background-color: black;
+        margin-top: 0;
         margin-left: auto;
     }
     
@@ -574,9 +604,8 @@ html {
     
     .name {
         margin-left: 0;
-        margin-bottom: 10px;
-        padding-top: 10px;
         font-size: x-large;
+        margin-right: auto;
     }
 
     .pg1, .pg2, .pg5{
@@ -731,6 +760,12 @@ html {
 }
 
 /* Responsive Design */
+@media (max-width: 992px) {
+    .loans {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -741,6 +776,29 @@ html {
     }
     .card, .tile {
         width: 100%;
+        max-width: 350px;
+    }
+    .stepscontainer {
+        padding: 20px;
+    }
+    .step {
+        width: 100%;
+        max-width: 350px;
+    }
+    .faqcontainer {
+        width: 90%;
+    }
+    .certs-grid {
+        gap: 15px;
+    }
+    .certs-card {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+    .contact-form-container {
+        width: 90%;
+        padding: 20px;
     }
 }
 
