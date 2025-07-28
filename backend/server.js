@@ -15,7 +15,7 @@ app.use(
     origin: [
       "http://localhost:5500",
       "http://127.0.0.1:5500",
-      "https://loan-web-app-frontend.onrender.com",
+      "https://loan-web-app-frontend-ew3f.onrender.com",
       /^http:\/\/localhost:\d+$/,
       /^http:\/\/127\.0\.0\.1:\d+$/,
     ],
