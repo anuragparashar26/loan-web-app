@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Loan Details and FAQs</title>
-    <style>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
 
-header {
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        header {
             position: fixed;
             top: 0;
             left: 0;
@@ -55,6 +60,8 @@ header {
             color: inherit;
         }
 
+
+
         footer {
             background-color: #00456d;
             color: white;
@@ -79,44 +86,67 @@ header {
         body {
             font-family: "DM Sans", sans-serif;
             margin: 0;
-            padding: 80px 20px 20px; 
+            padding: 0;
             background-color: #FFFFFF;
             color: #000000;
             line-height: 1.6;
-            min-height: 100vh; 
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
+            padding-top: 70px; /* Add top padding for fixed header */
         }
 
         @media (max-width: 768px) {
             header {
+                padding: 0 20px;
                 flex-direction: column;
                 height: auto;
-                padding: 10px;
             }
 
             .nav-links {
                 margin-top: 10px;
                 gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .name {
                 font-size: 24px;
             }
 
+            body {
+                padding-top: 100px;
+                padding-left: 0;
+                padding-right: 0;
+                padding-bottom: 0;
+            }
+
+            .container {
+                padding: 10px;
+                width: 100vw;
+                box-sizing: border-box;
+            }
+
+            .table-responsive {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
             table, th, td {
                 font-size: 0.9em;
+                min-width: 600px;
             }
         }
 
         
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 0;
+            padding: 20px; 
+            max-width: 1200px; 
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            box-sizing: border-box;
         }
         fh1 {
             color: #333;
@@ -137,6 +167,7 @@ header {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
+            overflow-x: auto;
         }
         th, td {
             border: 1px solid #ddd;
@@ -200,6 +231,21 @@ header {
             <div class="home">
                 <a href="../index.html" class="hide-link">Home</a>
             </div>
+            <div class="loans">
+                <a href="personal.html" class="hide-link">Personal Loan</a>
+            </div>
+            <div class="loans">
+                <a href="home.html" class="hide-link">Home Loan</a>
+            </div>
+            <div class="loans">
+                <a href="education.html" class="hide-link">Education Loan</a>
+            </div>
+            <div class="tools">
+                <a href="../templates/emicalc.html" class="hide-link">EMI Calculator</a>
+            </div>
+            <div class="comparison">
+                <a href="../templates/loancomparison.html" class="hide-link">Loan Comparison</a>
+            </div>
         </div>     
     </header>
     <div class="container">
@@ -214,23 +260,25 @@ header {
 
         <h2>Car Loan Interest Rates</h2>
         <p>Lendwise offers easy Car Loans at competitive interest rates. You can take advantage of these rates to get your dream car with manageable monthly payments.</p>
-        <table>
-            <tr>
-                <th>Loan Type</th>
-                <th>Tenure (12-35 months)</th>
-                <th>Tenure (36-84 months)</th>
-            </tr>
-            <tr>
-                <td>New Car Loans</td>
-                <td>10.20%* onwards, based on CIBIL Score and Car Segment</td>
-                <td>9.10%* onwards, based on CIBIL Score and Car Model</td>
-            </tr>
-            <tr>
-                <td>Used Car Loans</td>
-                <td>11.25%* onwards, based on CIBIL Score and Car Segment</td>
-                <td>-</td>
-            </tr>
-        </table>
+        <div class="table-responsive">
+            <table>
+                <tr>
+                    <th>Loan Type</th>
+                    <th>Tenure (12-35 months)</th>
+                    <th>Tenure (36-84 months)</th>
+                </tr>
+                <tr>
+                    <td>New Car Loans</td>
+                    <td>10.20%* onwards, based on CIBIL Score and Car Segment</td>
+                    <td>9.10%* onwards, based on CIBIL Score and Car Model</td>
+                </tr>
+                <tr>
+                    <td>Used Car Loans</td>
+                    <td>11.25%* onwards, based on CIBIL Score and Car Segment</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
 
         <h2>Car Loan Documents</h2>
         <p>Lendwise simplifies Car Loan applications with a clear and comprehensive Car Loan Documents List. Summary of the documents is given below:</p>
@@ -304,8 +352,8 @@ header {
     </div>
     <footer>
         <h1>Need More Help?</h1>
-        <p>Call Us: +91 7870645478</p>
-        <p>Email: code404@yourloanwebsite.com</p>
+        <p><i class= "fas fa-phone"></i> Call Us: +91 XXXXXXXXXX</p>
+        <p><i class= "fas fa-envelope"></i> Email: code404@yourloanwebsite.com</p>
     </footer>
     <script>
         document.querySelectorAll('.faq-question').forEach(question => {

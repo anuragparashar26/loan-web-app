@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loan EMI Calculator</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
     <style>
         html, body {
             height: 100%;
@@ -241,7 +242,16 @@
         </div>
         <div class="nav-links" id="navLinks">
             <div class="home">
-                <a href="index.html" class="hide-link">Home</a>
+                <a href="../index.html" class="hide-link">Home</a>
+            </div>
+            <div class="comparison">
+                <a href="loancomparison.html" class="hide-link">Loan Comparison</a>
+            </div>
+            <div class="cibil">
+                <a href="cibil.html" class="hide-link">CIBIL Info</a>
+            </div>
+            <div class="eligibility">
+                <a href="eligibility.html" class="hide-link">Eligibility</a>
             </div>
         </div>     
     </header>
@@ -266,7 +276,7 @@
             <div class="emi-result">
                 <h3>Equated Monthly Installments (EMI)</h3>
                 <p id="emiValue">₹4,421</p>
-                <button>Get instant funds</button>
+                <button id="eligibilityBtn">Get instant funds</button>
             </div>
         </div>
         <div class="breakup">
@@ -281,7 +291,7 @@
     </div>
     <footer>
         <h2>Need More Help?</h2>
-        <p><i class="fas fa-phone"></i> Call Us: +91 7870645478</p>
+        <p><i class="fas fa-phone"></i> Call Us: +91 XXXXXXXXXX</p>
         <p><i class="fas fa-envelope"></i> Email: code404@yourloanwebsite.com</p>
     </footer>
 
@@ -360,6 +370,10 @@
             document.getElementById('interestRate').value = value;
             updateValues();
         });
+
+        document.getElementById('eligibilityBtn').onclick = function() {
+            window.location.href = 'eligibility.html';
+        };
     </script>
 </body>
 </html>

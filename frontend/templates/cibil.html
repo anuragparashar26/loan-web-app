@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Score Checker - Full Details</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
+
     <style>
         * {
             margin: 0;
@@ -130,6 +132,25 @@
             margin: 5px 0;
             color: white;
         }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0 20px;
+            }
+
+            .container {
+                margin: 70px 20px 20px;
+                padding: 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -142,7 +163,16 @@
         </div>
         <div class="nav-links" id="navLinks">
             <div class="home">
-                <a href="index.html" class="hide-link">Home</a>
+                <a href="../index.html" class="hide-link">Home</a>
+            </div>
+            <div class="emi">
+                <a href="emicalc.html" class="hide-link">EMI Calculator</a>
+            </div>
+            <div class="comparison">
+                <a href="loancomparison.html" class="hide-link">Loan Comparison</a>
+            </div>
+            <div class="eligibility">
+                <a href="eligibility.html" class="hide-link">Eligibility</a>
             </div>
         </div>     
     </header>
@@ -413,8 +443,8 @@
     </div>
     <footer>
         <h2>Need More Help?</h2>
-        <p>Call Us: +91 7870645478</p>
-        <p>Email: code404@yourloanwebsite.com</p>
+        <p><i class = "fas fa-phone"></i> Call Us: +91 XXXXXXXXXX</p>
+        <p><i class = "fas fa-envelope"></i> Email: code404@yourloanwebsite.com</p>
     </footer>
 </body>
 </html>

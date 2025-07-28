@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education Loan Features and Process</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
     <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
 
-header {
+        header {
             position: fixed;
             top: 0;
             left: 0;
@@ -79,13 +83,14 @@ header {
         body {
             font-family: "DM Sans", sans-serif;
             margin: 0;
-            padding: 80px 20px 20px; 
+            padding: 0;
             background-color: #FFFFFF;
             color: #000000;
             line-height: 1.6;
-            min-height: 100vh; 
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
+            padding-top: 70px; /* Add top padding for fixed header */
         }
         .container {
             max-width: 800px;
@@ -94,15 +99,13 @@ header {
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
+            /* Remove transition */
         }
-        .container:hover {
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        }
+        /* Remove .container:hover */
         h1 {
             color: #333;
             text-align: center;
-            transition: color 0.3s ease;
+            /* Remove transition */
         }
     
         .info-box {
@@ -110,26 +113,21 @@ header {
             padding: 15px;
             border-left: 4px solid #1faeaa;
             margin-bottom: 20px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            /* Remove transition */
         }
-        .info-box:hover {
-            background-color: #d1e7ff;
-            transform: scale(1.01);
-        }
+        /* Remove .info-box:hover */
         h2 {
             color: #1faeaa;
             margin-top: 20px;
-            transition: color 0.3s ease, transform 0.3s ease;
+            /* Remove transition */
         }
         
         p {
             line-height: 1.6;
             color: #666;
-            transition: color 0.3s ease;
+            /* Remove transition */
         }
-        p:hover {
-            color: #333;
-        }
+        /* Remove p:hover */
         ul, ol {
             line-height: 1.6;
             color: #666;
@@ -138,50 +136,71 @@ header {
         }
         ul li, ol li {
             padding: 5px 0;
-            transition: background-color 0.3s ease, padding-left 0.3s ease;
+            /* Remove transition */
         }
-        ul li:hover, ol li:hover {
-            background-color: #f0f0f0;
-            padding-left: 10px;
-        }
+        /* Remove ul li:hover, ol li:hover */
         .note {
             font-style: italic;
             color: #888;
             margin-top: 10px;
-            transition: color 0.3s ease;
+            /* Remove transition */
         }
-        .note:hover {
-            color: #555;
-        }
+        /* Remove .note:hover */
         .example {
             background-color: #f0f0f0;
             padding: 10px;
             border-left: 4px solid #1faeaa;
             margin: 10px 0;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            /* Remove transition */
         }
-        .example:hover {
-            background-color: #e0e0e0;
-            transform: scale(1.01);
-        }
-
+        /* Remove .example:hover */
         .btn {
-    background-color: #1faeaa;
-    color: white;
-    font-size: 15px;
-    align-items: center;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    transition: 0.3s;
-}
+            background-color: #1faeaa;
+            color: white;
+            font-size: 15px;
+            align-items: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: 0.3s;
+        }
 
-.btn:hover {
-    color: #1faeaa;
-    border: solid 1px #1faeaa;
-    background-color: #ffffff;
-}
+        .btn:hover {
+            color: #1faeaa;
+            border: solid 1px #1faeaa;
+            background-color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0 20px;
+                flex-direction: column;
+                height: auto;
+            }
+
+            .nav-links {
+                margin-top: 10px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+
+            body {
+                padding-top: 100px;
+                padding-left: 0;
+                padding-right: 0;
+                padding-bottom: 0;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -195,6 +214,21 @@ header {
         <div class="nav-links" id="navLinks">
             <div class="home">
                 <a href="../index.html" class="hide-link">Home</a>
+            </div>
+            <div class="segments">
+                <a href="education2.html" class="hide-link">Loan Segments</a>
+            </div>
+            <div class="loans">
+                <a href="personal.html" class="hide-link">Personal Loan</a>
+            </div>
+            <div class="loans">
+                <a href="home.html" class="hide-link">Home Loan</a>
+            </div>
+            <div class="loans">
+                <a href="car.html" class="hide-link">Car Loan</a>
+            </div>
+            <div class="tools">
+                <a href="../templates/emicalc.html" class="hide-link">EMI Calculator</a>
             </div>
         </div>     
     </header>
@@ -377,8 +411,8 @@ header {
     </div>
     <footer>
         <h1>Need More Help?</h1>
-        <p>Call Us: +91 7870645478</p>
-        <p>Email: code404@yourloanwebsite.com</p>
+        <p><i class="fas fa-phone"></i> Call Us: +91 XXXXXXXXXX</p>
+        <p><i class="fas fa-envelope"></i> Email: code404@yourloanwebsite.com</p>
     </footer>
 </body>
 </html>
