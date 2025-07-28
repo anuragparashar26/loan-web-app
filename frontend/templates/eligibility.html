@@ -128,17 +128,17 @@
                 let serverUsed = '';
                 
                 try {
-                    loadingText.textContent = 'Connecting to local server...';
-                    response = await fetchWithTimeout('http://localhost:3000/check_eligibility');
-                    serverUsed = 'localhost';
-                } catch (localError) {
-                    console.log('Local server failed, trying production...', localError.message);
+                    loadingText.textContent = 'Connecting to production server...';
+                    response = await fetchWithTimeout('https://loan-web-app-backend.onrender.com/check_eligibility');
+                    serverUsed = 'production';
+                } catch (prodError) {
+                    console.log('Production server failed, trying local...', prodError.message);
                     try {
-                        loadingText.textContent = 'Connecting to production server...';
-                        response = await fetchWithTimeout('https://loan-web-app-backend.onrender.com/check_eligibility');
-                        serverUsed = 'production';
-                    } catch (prodError) {
-                        console.log('Production server also failed:', prodError.message);
+                        loadingText.textContent = 'Connecting to local server...';
+                        response = await fetchWithTimeout('http://localhost:3000/check_eligibility');
+                        serverUsed = 'localhost';
+                    } catch (localError) {
+                        console.log('Local server also failed:', localError.message);
                         throw new Error('Service temporarily unavailable. Please try again in a few minutes.');
                     }
                 }
