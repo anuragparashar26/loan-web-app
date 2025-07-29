@@ -329,6 +329,18 @@
 </footer>
     <script src="script.js"></script>
     <script>
+        const BACKEND_URL = 'https://loan-web-app-backend.onrender.com'; 
+        
+        function keepBackendWarm() {
+            fetch(`${BACKEND_URL}/keep-alive`)
+                .then(response => console.log('Backend ping successful'))
+                .catch(error => console.log('Backend ping failed:', error));
+        }
+        
+        keepBackendWarm();
+        
+        setInterval(keepBackendWarm, 13 * 60 * 1000);
+
         document.getElementById('hamburger').addEventListener('click', function() {
             document.getElementById('navLinks').classList.toggle('active');
         });

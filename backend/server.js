@@ -32,6 +32,11 @@ app.get("/health", (req, res) => {
   res.json({ status: "OK", timestamp: new Date().toISOString() });
 });
 
+// Add keep-alive endpoint
+app.get("/keep-alive", (req, res) => {
+  res.json({ status: "Server is warm", timestamp: new Date().toISOString() });
+});
+
 // Add a test GET route for /check_eligibility
 app.get("/check_eligibility", (req, res) => {
   res.json({ message: "This is a POST endpoint. Please send a POST request with loan data." });
@@ -362,9 +367,26 @@ function validateAndEncodeInput(data) {
 }
 
 let model;
+let modelLoading = false;
+
+// Self-ping to keep server warm (only in production)
+if (process.env.NODE_ENV === 'production') {
+  const SERVER_URL = process.env.RENDER_EXTERNAL_URL || 'https://loan-web-app-backend.onrender.com';
+  
+  setInterval(async () => {
+    try {
+      const response = await fetch(`${SERVER_URL}/keep-alive`);
+      console.log('Keep-alive ping:', response.status);
+    } catch (error) {
+      console.log('Keep-alive failed:', error.message);
+    }
+  }, 14 * 60 * 1000); // Ping every 14 minutes
+}
+
 (async () => {
   try {
     console.log("Initializing loan prediction model...");
+    modelLoading = true;
     model = await loadModel();
 
     if (!model) {
@@ -374,6 +396,7 @@ let model;
     } else {
       console.log("Model loaded successfully.");
     }
+    modelLoading = false;
 
     app.post("/api/loan-advice", async (req, res) => {
       try {
@@ -395,6 +418,12 @@ let model;
       console.log("Received request headers:", req.headers);
       console.log("Received request body:", req.body);
       try {
+        if (modelLoading) {
+          return res.status(503).json({ 
+            error: "Model is still loading. Please try again in a few seconds.",
+            retry: true 
+          });
+        }
         if (!model) {
           console.error("Model not loaded");
           return res.status(503).json({ error: "Model is not available. Please try again later." });
